@@ -1,8 +1,10 @@
 # PQC tables
 
+The goal of the following tables is to summarize the [ANSSI](#ANSSI) recommandations regarding post-quantum cryptography scheme usages for (French) certifications. These tables are subject to change depending on new cryptanalysis, new submitted algorithms to the [NIST Post-Quantum Cryptography Standardization](https://csrc.nist.gov/Projects/post-quantum-cryptography), new recommandations, etc. The simplified tables may give a quick overview of the ANSSI recommandations, while the larger tables will give more information, in particular about the sizes of the private key (sk), the public key (pk), the ciphertext (ct), the shared secret (ss) and the signature (sig).
+
 ## Tables (simplified)
 
-### Notes
+### On the ANSSI column
 
 According to [[ANSSI](#ANSSI)],
 
@@ -10,7 +12,7 @@ According to [[ANSSI](#ANSSI)],
 
 > ANSSI encourages to use a conjectured post-quantum security level on symmetric primitives consistent with the selected post-quantum PKC algorithm – in practice at least the same security level as AES-256 for block ciphers and at least the same security level as SHA2-384 for hash functions.
 
-We then consider, in the column ANSSI, that if a cryptographic scheme does not provide security parameters of level IV (at least as hard to break as SHA2-384) or level V (at least as hard to break as AES-256), the scheme is not suitable to be used to get a (French) certification.
+We then consider, in the ANSSI column, that if a cryptographic scheme does not provide security parameters for level IV (at least as hard to break as SHA2-384) or level V (at least as hard to break as AES-256), the scheme is not suitable to be used to get a (French) certification.
 
 
 ### Post-quantum cryptography key exchange mechanisms and their usage for (French) certifications
@@ -50,6 +52,8 @@ Other tables gathering data on PQC schemes can be found, for example at:
 
 * [Algorithms in liboqs](https://openquantumsafe.org/liboqs/algorithms/)
 * [PQC wiki](https://pqc-wiki.fau.edu/w/Special:DatabaseHome)
+
+For performance benchmarks, an interested reader may refer to [eBACS](https://bench.cr.yp.to/ebats.html).
 
 ### Post-quantum cryptography key exchange mechanisms and their usage for (French) certification
 
