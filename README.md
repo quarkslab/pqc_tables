@@ -46,14 +46,16 @@ We then consider, in the ANSSI column, that if a cryptographic scheme does not p
 
 ### Notes
 
-When two values in a cell, first is the one from the documentation, the second from the code.
+When two values in a cell, first is the one from the documentation, the second from the reference implementation submitted to [Round 3 submission of NIST Post-Quantum Cryptography](https://csrc.nist.gov/Projects/post-quantum-cryptography/round-3-submissions).
 
 Other tables gathering data on PQC schemes can be found, for example at:
 
-* [Algorithms in liboqs](https://openquantumsafe.org/liboqs/algorithms/)
-* [PQC wiki](https://pqc-wiki.fau.edu/w/Special:DatabaseHome)
+* [Algorithms in liboqs](https://openquantumsafe.org/liboqs/algorithms/);
+* [PQC wiki](https://pqc-wiki.fau.edu/w/Special:DatabaseHome).
 
-For performance benchmarks, an interested reader may refer to [eBACS](https://bench.cr.yp.to/ebats.html).
+It is also possible to look for the different `api.h` or `META.yml` of [PQClean](https://github.com/PQClean/PQClean).
+
+For performance benchmarks, an interested reader may refer to [eBACS](https://bench.cr.yp.to/ebats.html) or [pqm4](https://github.com/mupq/pqm4).
 
 ### Post-quantum cryptography key exchange mechanisms and their usage for (French) certification
 
