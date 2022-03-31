@@ -127,9 +127,7 @@ For performance benchmarks, an interested reader may refer to [eBACS](https://be
 
 <a name="6">[6]</a> [ROUND 3 OFFICIAL COMMENT: Rainbow](https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/KFgw5_qCXiI/m/cr66AGOfAgAJ)
 
-<a name="7">[7]</a> From [[ANSSI](#ANSSI)] and [[BSI](#BSI)]
-
-> ANSSI’s views are similar to the BSI’s position on many issues  (e.g. necessary migration, hybridation, cryptoagility).
+<a name="7">[7]</a> From [[BSI](#BSI)]
 
 > The mechanisms FrodoKEM-976, FrodoKEM-1344 as well as **Classic McEliece** with the parameters in **Categories 3 and 5** are assessed to be cryptographically suitable to protect confidential.
 
