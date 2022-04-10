@@ -14,6 +14,11 @@ According to [[ANSSI](#ANSSI)],
 
 We then consider, in the ANSSI column, that if a cryptographic scheme does not provide security parameters for level IV (at least as hard to break as SHA2-384) or level V (at least as hard to break as AES-256), the scheme is not suitable to be used to get a (French) certification.
 
+About the hybrid mechanism, it can be:
+
+* *concatenate KDF* for key exchange mechanisms, see Section 3.3 of [[SFG](#SFG)] or Section 8.2 of [[ETSI](#ETSI)];
+* *cascade KDF* for key exchange mechanisms, see Section 8.3 of [[ETSI](#ETSI)];
+* *concatenate* for signatures.
 
 ### Post-quantum cryptography key exchange mechanisms and their usage for (French) certifications
 
@@ -111,11 +116,15 @@ For performance benchmarks, an interested reader may refer to [eBACS](https://be
 
 ## Explanations
 
-<a name="ANSSI">[ANSSI]</a> [ANSSI views on the Post-Quantum Cryptography transition](https://www.ssi.gouv.fr/publication/anssi-views-on-the-post-quantum-cryptography-transition/)
+<a name="ANSSI">[ANSSI]</a> [ANSSI views on the Post-Quantum Cryptography transition](https://www.ssi.gouv.fr/publication/anssi-views-on-the-post-quantum-cryptography-transition/), 4 January 2022
 
-<a name="BSI">[BSI]</a> [Migration zu Post-Quanten-Kryptografie](https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Krypto/Post-Quanten-Kryptografie.html) and [BSI TR-02102-1: "Cryptographic Mechanisms: Recommendations and Key Lengths" Version: 2022-1](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.html)
+<a name="BSI">[BSI]</a> [Migration zu Post-Quanten-Kryptografie](https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Krypto/Post-Quanten-Kryptografie.html), 24 August 2020; [Cryptographic Mechanisms: Recommendations and Key Lengths](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.html), BSI TR-02102-1, Version: 2022-1, 11 February 2022
 
-<a name="NIST">[NIST]</a> [Status Report on the Second Round of the NIST Post-Quantum Cryptography Standardization Process](https://csrc.nist.gov/publications/detail/nistir/8309/final)
+<a name="ETSI">[ETSI]</a> [Quantum-safe hybrid key exchanges](https://www.etsi.org/deliver/etsi_ts/103700_103799/103744/01.01.01_60/ts_103744v010101p.pdf). ETSI TS 103 744 V1.1.1, December 2020
+
+<a name="NIST">[NIST]</a> G. Alagic, J. Alperin-Sheriff, D. Apon, D. Cooper, Q. Dang, J. Kelsey, Y.-K. Liu (NIST), C. Miller, D. Moody, R. Peralta, R. Perlner, A. Robinson and D. Smith-Tone, [Status Report on the Second Round of the NIST Post-Quantum Cryptography Standardization Process](https://csrc.nist.gov/publications/detail/nistir/8309/final), NISTIR 8309, July 2020
+
+<a name="SFG">[SFG]</a> D. Stebila, S. Fluhrer and S. Gueron, [Hybrid key exchange in TLS 1.3](https://datatracker.ietf.org/doc/html/draft-ietf-tls-hybrid-design-04), Network Working Group, Internet-Draft, 11 January 2022. 
 
 <a name="1">[1]</a> Not compliant if conservative choice (non-local) for the computational model, Hybrid otherwise
 
