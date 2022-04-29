@@ -62,6 +62,12 @@ It is also possible to look for the different `api.h` or `META.yml` of [PQClean]
 
 For performance benchmarks, an interested reader may refer to [eBACS](https://bench.cr.yp.to/ebats.html) or [pqm4](https://github.com/mupq/pqm4).
 
+In the variants of LMS, HSS, XMSS and XMSS-MT, the ``..`` or ``../..`` refers to the paramaters given:
+
+* for LMS, in Table 2 of [[RFC8554](#RFC8554)];
+* for XMSS, in Table 2 of [[RFC8391](#RFC8391)];
+* for XMSS-MT, in Table 4 of [[RFC8391](#RFC8391)].
+
 ### Post-quantum cryptography key exchange mechanisms and their usage for (French) certification
 
 | KEM                | Security Levels (claimed)    | Variant (best security levels)  | Type                 | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] |  sk size (bytes)                  | pk size (bytes)                    | ct size (bytes)    | ss size (bytes)         |
@@ -92,21 +98,23 @@ For performance benchmarks, an interested reader may refer to [eBACS](https://be
 
 | Signature          | Security Levels (claimed)    | Variants (best security levels) | Type                 | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes)                 |  pk size (bytes)                   | sig size (bytes)  |
 | ---                | ---                          | ---                             | ---                  | ---                  | ---                     | ---                             |  ---                               | ---               |
-| LMS                | V                [[18](#18)] | SHA-256                         | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent           |                     56 [[16](#16)] |         Dependent |
-| HSS                | V                [[18](#18)] | SHA-256                         | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent           |                     60 [[11](#11)] |         Dependent |
-| XMSS               | II, III, V       [[17](#17)] | SHA-256, SHAKE256               | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent           |                     68 [[11](#11)] |         Dependent |
-| XMSS-MT            | II, III, V       [[17](#17)] | SHA-256, SHAKE256               | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent           |                     68 [[11](#11)] |         Dependent |
-| CRYSTALS-DILITHIUM | II, III, V                   | 5                               | Lattice (structured) | Finalist             | Hybrid      [[13](#13)] |                 4,880 [[5](#5)] |                  2,592             |             4,595 |
+| LMS                | V                [[18](#18)] | ``LMS_SHA256_M32_H..``          | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent           |                     56 [[16](#16)] |         Dependent |
+| HSS                | V                [[18](#18)] | with ``LMS_SHA256_M32_H..``     | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent           |                     60 [[11](#11)] |         Dependent |
+| XMSS               | II, V            [[17](#17)] | ``XMSS-SHA2_.._256``            | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent           |                     68 [[11](#11)] |         Dependent |
+| XMSS               | II, V            [[17](#17)] | ``XMSS-SHAKE_.._512``           | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent           |                    132 [[11](#11)] |         Dependent |
+| XMSS-MT            | II, V            [[17](#17)] | ``XMSSMT-SHA2_../.._256``       | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent           |                     68 [[11](#11)] |         Dependent |
+| XMSS-MT            | II, V            [[17](#17)] | ``XMSSMT-SHAKE_../.._512``      | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent           |                    132 [[11](#11)] |         Dependent |
+| CRYSTALS-DILITHIUM | II, V                        | 5                               | Lattice (structured) | Finalist             | Hybrid      [[13](#13)] |                 4,880 [[5](#5)] |                  2,592             |             4,595 |
 | FALCON             | I, V                         | 1024                            | Lattice (structured) | Finalist             | Hybrid      [[13](#13)] |                 2,305 [[5](#5)] |                  1,793             |   1,280 /   1,330 |
 | Rainbow            | I, III             [[6](#6)] | V-Standard                      | Multivariate         | Finalist             | Not compliant           | 1,375,700 / 1,408,736           |  1,885,400 / 1,930,600             |               212 |
 | Rainbow            | I, III             [[6](#6)] | V-CZ                            | Multivariate         | Finalist             | Not compliant           | 1,375,700 / 1,408,736           |    523,600 /   536,136             |               212 |
 | Rainbow            | I, III             [[6](#6)] | V-Compressed                    | Multivariate         | Finalist             | Not compliant           |                    64           |    523,600 /   536,136             |               212 |
-| GeMSS              | ?                [[15](#15)] | GeMSS256                        | Multivariate         | Alternate            | Not compliant           |                    32           |              3,040,700             |                72 |
-| GeMSS              | ?                [[15](#15)] | BlueGeMSS256                    | Multivariate         | Alternate            | Not compliant           |                    32           |              3,087,963             |                74 |
-| GeMSS              | ?                [[15](#15)] | CyanGeMSS256                    | Multivariate         | Alternate            | Not compliant           |                    32           |              3,272,017             |                66 |
-| GeMSS              | ?                [[15](#15)] | RedGeMSS256                     | Multivariate         | Alternate            | Not compliant           |                    32           |              3,135,591             |                75 |
-| GeMSS              | ?                [[15](#15)] | MagentaGeMSS256                 | Multivariate         | Alternate            | Not compliant           |                    32           |              3,321,717             |                67 |
-| GeMSS              | ?                [[15](#15)] | WhiteGeMSS256                   | Multivariate         | Alternate            | Not compliant           |                    32           |              3,222,691             |                65 |
+| GeMSS              | < I              [[15](#15)] | GeMSS256                        | Multivariate         | Alternate            | Not compliant           |                    32           |              3,040,700             |                72 |
+| GeMSS              | < I              [[15](#15)] | BlueGeMSS256                    | Multivariate         | Alternate            | Not compliant           |                    32           |              3,087,963             |                74 |
+| GeMSS              | < I              [[15](#15)] | CyanGeMSS256                    | Multivariate         | Alternate            | Not compliant           |                    32           |              3,272,017             |                66 |
+| GeMSS              | < I              [[15](#15)] | RedGeMSS256                     | Multivariate         | Alternate            | Not compliant           |                    32           |              3,135,591             |                75 |
+| GeMSS              | < I              [[15](#15)] | MagentaGeMSS256                 | Multivariate         | Alternate            | Not compliant           |                    32           |              3,321,717             |                67 |
+| GeMSS              | < I              [[15](#15)] | WhiteGeMSS256                   | Multivariate         | Alternate            | Not compliant           |                    32           |              3,222,691             |                65 |
 | Picnic             | I, III, V                    | L5-FS                           | ZKP / Symmetric      | Alternate            | Hybrid                  |        32 /        97           |         64 /        65             | 132,856 / 132,876 |
 | Picnic             | I, III, V                    | L5-UR                           | ZKP / Symmetric      | Alternate            | Hybrid                  |        32 /        97           |         64 /        65             | 209,506 / 209,526 |
 | Picnic             | I, III, V                    | L5-full                         | ZKP / Symmetric      | Alternate            | Hybrid                  |        32 /        97           |         64 /        65             |           126,286 |
@@ -132,13 +140,15 @@ For performance benchmarks, an interested reader may refer to [eBACS](https://be
 
 <a name="NIST">[NIST]</a> G. Alagic, J. Alperin-Sheriff, D. Apon, D. Cooper, Q. Dang, J. Kelsey, Y.-K. Liu, C. Miller, D. Moody, R. Peralta, R. Perlner, A. Robinson and D. Smith-Tone, [Status Report on the Second Round of the NIST Post-Quantum Cryptography Standardization Process](https://csrc.nist.gov/publications/detail/nistir/8309/final), NISTIR 8309, July 2020
 
+<a name="NISTSTD">[NISTSTD]</a> D. Cooper, D. Apon, Q. Dang, M. Davidson, M. Dworkin, and C. Miller, [Recommendation for Stateful Hash-Based Signature Schemes](https://doi.org/10.6028/NIST.SP.800-208), NIST Special Publication 800-208, October 2020
+
 <a name="RFC8391">[RFC8391]</a> A. Huelsing, D. Butin, S. Gazdag, J. Rijneveld and A. Mohaisen, [XMSS: eXtended Merkle Signature Scheme](https://datatracker.ietf.org/doc/html/rfc8391), RFC 8391, May 2018
 
 <a name="RFC8554">[RFC8554]</a> D. McGrew, M. Curcio and S. Fluhrer, [Leighton-Micali Hash-Based Signatures](https://datatracker.ietf.org/doc/html/rfc8554), RFC8554, April 2019
 
 <a name="SFG">[SFG]</a> D. Stebila, S. Fluhrer and S. Gueron, [Hybrid key exchange in TLS 1.3](https://datatracker.ietf.org/doc/html/draft-ietf-tls-hybrid-design-04), Network Working Group, Internet-Draft, 11 January 2022
 
-<a name="TPD">[TPD]</a> C. Tao, A. Petzoldt and J. Ding, [Efficient Key Recovery for All HFE Signature Variants](https://doi.org/10.1007/978-3-030-84242-0_4). In: Malkin, T., Peikert, C. (eds)  CRYPTO 2021. LNCS, vol. 12825, pp  70-93. Springer (11 August 2021)
+<a name="TPD">[TPD]</a> C. Tao, A. Petzoldt and J. Ding, [Efficient Key Recovery for All HFE Signature Variants](https://doi.org/10.1007/978-3-030-84242-0_4). In: T. Malkin and C. Peikert (eds), CRYPTO 2021. LNCS, vol. 12825, pp. 70-93. Springer (11 August 2021)
 
 <a name="1">[1]</a> Not compliant if conservative choice (non-local) for the computational model, Hybrid otherwise
 
@@ -166,7 +176,7 @@ For performance benchmarks, an interested reader may refer to [eBACS](https://be
 
 > Hash-based signatures are an exception for hybridation: due to their well-studied underlying mathematical problem, ANSSI estimates that these algorithms could be used today without hybridation. However, their potential application range is limited (low number of signatures queries or large signature sizes).
 
-<a name="10">[10]</a> [Recommendation for Stateful Hash-Based Signature Schemes](https://doi.org/10.6028/NIST.SP.800-208)
+<a name="10">[10]</a> See [[NISTSTD](#NISTSTD)], [[RFC8391](#RFC8391)] and [[RFC8554](#RFC8554)]
 
 <a name="11">[11]</a> See Table 2 in [[KF](#KF)]
 
@@ -180,14 +190,16 @@ For performance benchmarks, an interested reader may refer to [eBACS](https://be
 
 <a name="15">[15]</a> The two attacks in [[TPD](#TPD), [BBCPSTV](#BBCPSTV)] show that the security of GeMSS256, BlueGeMSS256 and RedGeMSS256 are less than level I
 
-<a name="16">[16]</a> In [[RFC8554](#RFC8554)]
+<a name="16">[16]</a> From [[RFC8554](#RFC8554)]
 
 > If the public key is not exactly 24 + m bytes long, return INVALID
 
-<a name="17">[17]</a> In [[RFC8391](#RFC8391)], see [Errata ID: 6024](https://www.rfc-editor.org/errata/eid6024)
+<a name="17">[17]</a> From [[RFC8391](#RFC8391)], see [Errata ID: 6024](https://www.rfc-editor.org/errata/eid6024)
 
 > Parameters with SHA2 and n = 32 [...] and with SHA2 and n = 64 [...] yield post-quantum security of 128 and 256 bits, respectively. Parameters with SHAKE and n = 32 [...] [and] with SHAKE and n = 64 [...] yield post-quantum security of 86 and 170 bits, respectively.
 
 > In consequence, SHAKE-128 cannot provide more security than NIST post-quantum security level II.
+
+We then will consider in the table only the SHA-256 and SHAKE256 variants, other paramaters being not relevant in the context of [[ANSSI](#ANSSI)]
 
 <a name="18">[18]</a> See Table 1 in [[KPCSA](#KPCSA)]
