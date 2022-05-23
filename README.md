@@ -1,6 +1,6 @@
 # PQC tables
 
-The goal of the following tables is to summarize the [ANSSI](#ANSSI) recommandations regarding post-quantum cryptography scheme usages for (French) certifications. These tables are subject to change depending on new cryptanalysis, new submitted algorithms to the [NIST Post-Quantum Cryptography Standardization](https://csrc.nist.gov/Projects/post-quantum-cryptography), new recommandations, etc. The simplified tables may give a quick overview of the ANSSI recommandations, while the larger tables will give more information, in particular about the sizes of the private key (sk), the public key (pk), the ciphertext (ct), the shared secret (ss) and the signature (sig).
+The goal of the following tables is to summarize the current [ANSSI](#ANSSI) views regarding post-quantum cryptography scheme usages for (French) certifications. These tables are subject to change depending on new cryptanalysis, new submitted algorithms to the [NIST Post-Quantum Cryptography Standardization](https://csrc.nist.gov/Projects/post-quantum-cryptography), new recommandations, etc. The simplified tables may give a quick overview of the ANSSI recommandations, while the larger tables will give more information, in particular about the sizes of the private key (sk), the public key (pk), the ciphertext (ct), the shared secret (ss) and the signature (sig).
 
 ## Tables (simplified)
 
@@ -19,6 +19,14 @@ About the hybrid mechanism, it can be:
 * *concatenate KDF* for key exchange mechanisms, see Section 3.3 of [[SFG](#SFG)] or Section 8.2 of [[ETSI](#ETSI)];
 * *cascade KDF* for key exchange mechanisms, see Section 8.3 of [[ETSI](#ETSI)];
 * *concatenate* for signatures.
+
+### Notes
+
+We give in notes some additional content, either to justify our results or to give more information and some recommendations, coming from the ANSSI views or from other governments’ positions. Indeed, as mentioned in [ANSSI](#ANSSI),
+
+> Several governments have published similar position papers recommending to prepare the post-quantum transition. ANSSI’s views are similar to the BSI’s position on many issues (e.g. necessary migration, hybridation, cryptoagility).
+
+Even if these tables are focused on the French context, they may be used in other national context too.
 
 ### Post-quantum cryptography key exchange mechanisms and their usage for (French) certifications
 
@@ -51,12 +59,13 @@ About the hybrid mechanism, it can be:
 
 ### Notes
 
-When two values in a cell, first is the one from the documentation, the second from the reference implementation submitted to [Round 3 submission of NIST Post-Quantum Cryptography](https://csrc.nist.gov/Projects/post-quantum-cryptography/round-3-submissions).
+When two values are in a same cell, first is the one from the documentation, the second from the reference implementation submitted to [Round 3 submission of NIST Post-Quantum Cryptography](https://csrc.nist.gov/Projects/post-quantum-cryptography/round-3-submissions).
 
 Other tables gathering data on PQC schemes can be found, for example at:
 
 * [Algorithms in liboqs](https://openquantumsafe.org/liboqs/algorithms/);
-* [PQC wiki](https://pqc-wiki.fau.edu/w/Special:DatabaseHome).
+* [[ETSIKEM](#ETSIKEM)] and [[ETSISIG](#ETSISIG)];
+* [PQC wiki](https://pqc-wiki.fau.edu/w/Special:DatabaseHome);
 
 It is also possible to look for the different `api.h` or `META.yml` of [PQClean](https://github.com/PQClean/PQClean).
 
@@ -70,57 +79,57 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 
 ### Post-quantum cryptography key exchange mechanisms and their usage for (French) certification
 
-| KEM                | Security Levels              | Variant (best security levels)  | Type                 | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] |  sk size (bytes)                  | pk size (bytes)                    | ct size (bytes)    | ss size (bytes)         |
-| ---                | ---                          | ---                             | ---                  | ---                  | ---                     | ---                               | ---                                | ---                | ---                     |
-| Classic McEliece   | I, III, V                    | 6960119(f)                      | Code                 | Finalist             | Hybrid        [[7](#7)] |                13,948             |              1,047,319             |    226             |          32             |
-| Classic McEliece   | I, III, V                    | 8192128(f)                      | Code                 | Finalist             | Hybrid        [[7](#7)] |                14,120             |              1,357,824             |    240             |          32             |
-| CRYSTALS-KYBER     | I, III, V                    | 1024                            | Lattice (structured) | Finalist             | Hybrid      [[13](#13)] |                 3,168             |                  1,568             |  1,568             |          32             |
-| NTRU               | I, III, V [[3](#3)]          | HPS-4096-821                    | Lattice (structured) | Finalist             | Maybe hybrid  [[1](#1)] |                 1,590             |                  1,230             |  1.230             |          32             |
-| NTRU               | I, III, V [[2](#2), [3](#3)] | HPS-4096-1229                   | Lattice (structured) | Finalist             | Hybrid                  |                 2,366   [[5](#5)] |                  1,842   [[5](#5)] |  1,842   [[5](#5)] |          32   [[5](#5)] |
-| NTRU               | I, III, V [[2](#2), [4](#4)] | HRSS-1373                       | Lattice (structured) | Finalist             | Hybrid                  |                 2,938   [[5](#5)] |                  2,401   [[5](#5)] |  2.401   [[5](#5)] |          32   [[5](#5)] |
-| SABER              | I, III, V                    | FireSaber                       | Lattice (structured) | Finalist             | Hybrid                  |                 3,040             |                  1,312             |  1.472             |          32             |
-| SABER              | I, III, V                    | FireSaber, compressed           | Lattice (structured) | Finalist             | Hybrid                  |                 1,760 [[12](#12)] |                  1,312 [[12](#12)] |  1,472 [[12](#12)] |          32 [[12](#12)] |
-| SABER              | I, III, V                    | uFireSaber                      | Lattice (structured) | Finalist             | Hybrid                  |                 2,912             |                  1,312             |  1.472             |          32             |
-| SABER              | I, III, V                    | uFireSaber, compressed          | Lattice (structured) | Finalist             | Hybrid                  |                 1,632 [[12](#12)] |                  1,312 [[12](#12)] |  1,472 [[12](#12)] |          32 [[12](#12)] |
-| BIKE               | I, III, V                    | Level 5                         | Code                 | Alternate            | Hybrid                  |                   580             |      5,122 /    10,276             |  5,154             |          32             |
-| FrodoKEM           | I, III, V                    | 1344                            | Lattice              | Alternate            | Hybrid        [[8](#8)] |                43,088             |                 21,520             | 21,632             |          32             |
-| HQC                | I, III, V                    | 256                             | Code                 | Alternate            | Hybrid                  |                  7285             |                  7,245             | 14,469             |          64             |
-| NTRU Prime         | I, II, III, IV, V            | sntrup953           [[14](#14)] | Lattice (structured) | Alternate            | Hybrid                  |                 2,254             |                  1,505             |  1,349             |          32             |
-| NTRU Prime         | I, II, III, IV, V            | ntrulpr953          [[14](#14)] | Lattice (structured) | Alternate            | Hybrid                  |                 1,652             |                  1,349             |  1,477             |          32             |
-| NTRU Prime         | I, II, III, IV, V            | sntrup1013 (level IV)           | Lattice (structured) | Alternate            | Hybrid                  |                 2,417             |                  1,623             |  1,455             |          32             |
-| NTRU Prime         | I, II, III, IV, V            | ntrulpr1013 (level IV)          | Lattice (structured) | Alternate            | Hybrid                  |                 1,773             |                  1,455             |  1,583             |          32             |
-| NTRU Prime         | I, II, III, IV, V            | sntrup1277                      | Lattice (structured) | Alternate            | Hybrid                  |                 3,059             |                  2,067             |  1,847             |          32             |
-| NTRU Prime         | I, II, III, IV, V            | ntrulpr1277                     | Lattice (structured) | Alternate            | Hybrid                  |                 2,231             |                  1,847             |  1,975             |          32             |
-| SIKE               | I, II, III, V                | p751                            | Isogenies            | Alternate            | Hybrid                  |                   644             |                    564             |    596             |          32             |
-| SIKE               | I, II, III, V                | p751, compressed                | Isogenies            | Alternate            | Hybrid                  |                   602             |                    335             |    410             |          32             |
+| KEM                | Security Levels              | Variant (best security levels)        | Type                 | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] |  sk size (bytes)                  | pk size (bytes)                    | ct size (bytes)    | ss size (bytes)         |
+| ---                | ---                          | ---                                   | ---                  | ---                  | ---                     | ---                               | ---                                | ---                | ---                     |
+| Classic McEliece   | I, III, V                    | 6960119(f)                            | Code                 | Finalist             | Hybrid        [[7](#7)] |                13,948             |              1,047,319             |    226             |          32             |
+| Classic McEliece   | I, III, V                    | 8192128(f)                            | Code                 | Finalist             | Hybrid        [[7](#7)] |                14,120             |              1,357,824             |    240             |          32             |
+| CRYSTALS-KYBER     | I, III, V                    | 1024                                  | Lattice (structured) | Finalist             | Hybrid      [[13](#13)] |                 3,168             |                  1,568             |  1,568             |          32             |
+| NTRU               | I, III, V [[3](#3)]          | HPS-4096-821                          | Lattice (structured) | Finalist             | Maybe hybrid  [[1](#1)] |                 1,590             |                  1,230             |  1.230             |          32             |
+| NTRU               | I, III, V [[2](#2), [3](#3)] | HPS-4096-1229                         | Lattice (structured) | Finalist             | Hybrid                  |                 2,366   [[5](#5)] |                  1,842   [[5](#5)] |  1,842   [[5](#5)] |          32   [[5](#5)] |
+| NTRU               | I, III, V [[2](#2), [4](#4)] | HRSS-1373                             | Lattice (structured) | Finalist             | Hybrid                  |                 2,938   [[5](#5)] |                  2,401   [[5](#5)] |  2.401   [[5](#5)] |          32   [[5](#5)] |
+| SABER              | I, III, V                    | FireSaber                             | Lattice (structured) | Finalist             | Hybrid                  |                 3,040             |                  1,312             |  1.472             |          32             |
+| SABER              | I, III, V                    | FireSaber, compressed                 | Lattice (structured) | Finalist             | Hybrid                  |                 1,760 [[12](#12)] |                  1,312 [[12](#12)] |  1,472 [[12](#12)] |          32 [[12](#12)] |
+| SABER              | I, III, V                    | uFireSaber                            | Lattice (structured) | Finalist             | Hybrid                  |                 2,912             |                  1,312             |  1.472             |          32             |
+| SABER              | I, III, V                    | uFireSaber, compressed                | Lattice (structured) | Finalist             | Hybrid                  |                 1,632 [[12](#12)] |                  1,312 [[12](#12)] |  1,472 [[12](#12)] |          32 [[12](#12)] |
+| BIKE               | I, III, V                    | Level 5                               | Code                 | Alternate            | Hybrid                  |                   580             |      5,122 /    10,276             |  5,154             |          32             |
+| FrodoKEM           | I, III, V                    | 1344                                  | Lattice              | Alternate            | Hybrid        [[8](#8)] |                43,088             |                 21,520             | 21,632             |          32             |
+| HQC                | I, III, V                    | 256                                   | Code                 | Alternate            | Hybrid                  |                  7285             |                  7,245             | 14,469             |          64             |
+| NTRU Prime         | I, II, III, IV, V            | sntrup953 (level III/IV [[14](#14)])  | Lattice (structured) | Alternate            | Hybrid                  |                 2,254             |                  1,505             |  1,349             |          32             |
+| NTRU Prime         | I, II, III, IV, V            | ntrulpr953 (level III/IV [[14](#14)]) | Lattice (structured) | Alternate            | Hybrid                  |                 1,652             |                  1,349             |  1,477             |          32             |
+| NTRU Prime         | I, II, III, IV, V            | sntrup1013 (level IV)                 | Lattice (structured) | Alternate            | Hybrid                  |                 2,417             |                  1,623             |  1,455             |          32             |
+| NTRU Prime         | I, II, III, IV, V            | ntrulpr1013 (level IV)                | Lattice (structured) | Alternate            | Hybrid                  |                 1,773             |                  1,455             |  1,583             |          32             |
+| NTRU Prime         | I, II, III, IV, V            | sntrup1277                            | Lattice (structured) | Alternate            | Hybrid                  |                 3,059             |                  2,067             |  1,847             |          32             |
+| NTRU Prime         | I, II, III, IV, V            | ntrulpr1277                           | Lattice (structured) | Alternate            | Hybrid                  |                 2,231             |                  1,847             |  1,975             |          32             |
+| SIKE               | I, II, III, V                | p751                                  | Isogenies            | Alternate            | Hybrid                  |                   644             |                    564             |    596             |          32             |
+| SIKE               | I, II, III, V                | p751, compressed                      | Isogenies            | Alternate            | Hybrid                  |                   602             |                    335             |    410             |          32             |
 
 ### Post-quantum cryptography signatures and their usage for (French) certification
 
-| Signature          | Security Levels              | Variants (best security levels) | Type                 | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes)                   |  pk size (bytes)                   | sig size (bytes)  |
-| ---                | ---                          | ---                             | ---                  | ---                  | ---                     | ---                               |  ---                               | ---               |
-| LMS                | V                [[18](#18)] | `LMS_SHA256_M32_H..`            | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent             |                     56 [[16](#16)] |         Dependent |
-| HSS                | V                [[18](#18)] | with `LMS_SHA256_M32_H..`       | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent             |                     60 [[11](#11)] |         Dependent |
-| XMSS               | II, V            [[17](#17)] | `XMSS-SHA2_.._256`              | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent             |                     68 [[11](#11)] |         Dependent |
-| XMSS               | II, V            [[17](#17)] | `XMSS-SHAKE_.._512`             | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent             |                    132 [[11](#11)] |         Dependent |
-| XMSS-MT            | II, V            [[17](#17)] | `XMSSMT-SHA2_../.._256`         | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent             |                     68 [[11](#11)] |         Dependent |
-| XMSS-MT            | II, V            [[17](#17)] | `XMSSMT-SHAKE_../.._512`        | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent             |                    132 [[11](#11)] |         Dependent |
-| CRYSTALS-DILITHIUM | II, V                        | 5                               | Lattice (structured) | Finalist             | Hybrid      [[13](#13)] |                 4,880   [[5](#5)] |                  2,592             |             4,595 |
-| FALCON             | I, V                         | 1024                            | Lattice (structured) | Finalist             | Hybrid      [[13](#13)] |                 2,305   [[5](#5)] |                  1,793             |   1,280 /   1,330 |
-| Rainbow            | I, III             [[6](#6)] | V-Standard                      | Multivariate         | Finalist             | Not compliant           | 1,375,700 / 1,408,736             |  1,885,400 / 1,930,600             |               212 |
-| Rainbow            | I, III             [[6](#6)] | V-CZ                            | Multivariate         | Finalist             | Not compliant           | 1,375,700 / 1,408,736             |    523,600 /   536,136             |               212 |
-| Rainbow            | I, III             [[6](#6)] | V-Compressed                    | Multivariate         | Finalist             | Not compliant           |                    64             |    523,600 /   536,136             |               212 |
-| GeMSS              | < I              [[15](#15)] | GeMSS256                        | Multivariate         | Alternate            | Not compliant           |                    32             |              3,040,700             |                72 |
-| GeMSS              | < I              [[15](#15)] | BlueGeMSS256                    | Multivariate         | Alternate            | Not compliant           |                    32             |              3,087,963             |                74 |
-| GeMSS              | < I              [[15](#15)] | CyanGeMSS256                    | Multivariate         | Alternate            | Not compliant           |                    32             |              3,272,017             |                66 |
-| GeMSS              | < I              [[15](#15)] | RedGeMSS256                     | Multivariate         | Alternate            | Not compliant           |                    32             |              3,135,591             |                75 |
-| GeMSS              | < I              [[15](#15)] | MagentaGeMSS256                 | Multivariate         | Alternate            | Not compliant           |                    32             |              3,321,717             |                67 |
-| GeMSS              | < I              [[15](#15)] | WhiteGeMSS256                   | Multivariate         | Alternate            | Not compliant           |                    32             |              3,222,691             |                65 |
-| Picnic             | I, III, V                    | L5-FS                           | ZKP / Symmetric      | Alternate            | Hybrid                  |        32 /        97             |         64 /        65             | 132,856 / 132,876 |
-| Picnic             | I, III, V                    | L5-UR                           | ZKP / Symmetric      | Alternate            | Hybrid                  |        32 /        97             |         64 /        65             | 209,506 / 209,526 |
-| Picnic             | I, III, V                    | L5-full                         | ZKP / Symmetric      | Alternate            | Hybrid                  |        32 /        97             |         64 /        65             |           126,286 |
-| Picnic             | I, III, V                    | 3-L5                            | ZKP / Symmetric      | Alternate            | Hybrid                  |        32 /        97             |         64 /        65             |  54,732 /  61,028 |
-| SPHINCS+           | I, III, V                    | 256s                            | Hash (stateless)     | Alternate            | Compliant     [[9](#9)] |                   128             |                     64             |            29,792 |
-| SPHINCS+           | I, III, V                    | 256f                            | Hash (stateless)     | Alternate            | Compliant     [[9](#9)] |                   128             |                     64             |            49,856 |
+| Signature          | Security Levels              | Variants (best security levels)       | Type                 | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes)                   |  pk size (bytes)                   | sig size (bytes)  |
+| ---                | ---                          | ---                                   | ---                  | ---                  | ---                     | ---                               |  ---                               | ---               |
+| LMS                | V                [[18](#18)] | `LMS_SHA256_M32_H..`                  | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent             |                     56 [[16](#16)] |         Dependent |
+| HSS                | V                [[18](#18)] | with `LMS_SHA256_M32_H..`             | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent             |                     60 [[11](#11)] |         Dependent |
+| XMSS               | II, V            [[17](#17)] | `XMSS-SHA2_.._256`                    | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent             |                     68 [[11](#11)] |         Dependent |
+| XMSS               | II, V            [[17](#17)] | `XMSS-SHAKE_.._512`                   | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent             |                    132 [[11](#11)] |         Dependent |
+| XMSS-MT            | II, V            [[17](#17)] | `XMSSMT-SHA2_../.._256`               | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent             |                     68 [[11](#11)] |         Dependent |
+| XMSS-MT            | II, V            [[17](#17)] | `XMSSMT-SHAKE_../.._512`              | Hash (stateful)      | Standard [[10](#10)] | Compliant     [[9](#9)] |             Dependent             |                    132 [[11](#11)] |         Dependent |
+| CRYSTALS-DILITHIUM | II, III, V                   | 5                                     | Lattice (structured) | Finalist             | Hybrid      [[13](#13)] |                 4,880   [[5](#5)] |                  2,592             |             4,595 |
+| FALCON             | I, V                         | 1024                                  | Lattice (structured) | Finalist             | Hybrid      [[13](#13)] |                 2,305   [[5](#5)] |                  1,793             |   1,280 /   1,330 |
+| Rainbow            | I, III             [[6](#6)] | V-Standard                            | Multivariate         | Finalist             | Not compliant           | 1,375,700 / 1,408,736             |  1,885,400 / 1,930,600             |               212 |
+| Rainbow            | I, III             [[6](#6)] | V-CZ                                  | Multivariate         | Finalist             | Not compliant           | 1,375,700 / 1,408,736             |    523,600 /   536,136             |               212 |
+| Rainbow            | I, III             [[6](#6)] | V-Compressed                          | Multivariate         | Finalist             | Not compliant           |                    64             |    523,600 /   536,136             |               212 |
+| GeMSS              | < I              [[15](#15)] | GeMSS256                              | Multivariate         | Alternate            | Not compliant           |                    32             |              3,040,700             |                72 |
+| GeMSS              | < I              [[15](#15)] | BlueGeMSS256                          | Multivariate         | Alternate            | Not compliant           |                    32             |              3,087,963             |                74 |
+| GeMSS              | < I              [[15](#15)] | CyanGeMSS256                          | Multivariate         | Alternate            | Not compliant           |                    32             |              3,272,017             |                66 |
+| GeMSS              | < I              [[15](#15)] | RedGeMSS256                           | Multivariate         | Alternate            | Not compliant           |                    32             |              3,135,591             |                75 |
+| GeMSS              | < I              [[15](#15)] | MagentaGeMSS256                       | Multivariate         | Alternate            | Not compliant           |                    32             |              3,321,717             |                67 |
+| GeMSS              | < I              [[15](#15)] | WhiteGeMSS256                         | Multivariate         | Alternate            | Not compliant           |                    32             |              3,222,691             |                65 |
+| Picnic             | I, III, V                    | L5-FS                                 | ZKP / Symmetric      | Alternate            | Hybrid                  |        32 /        97             |         64 /        65             | 132,856 / 132,876 |
+| Picnic             | I, III, V                    | L5-UR                                 | ZKP / Symmetric      | Alternate            | Hybrid                  |        32 /        97             |         64 /        65             | 209,506 / 209,526 |
+| Picnic             | I, III, V                    | L5-full                               | ZKP / Symmetric      | Alternate            | Hybrid                  |        32 /        97             |         64 /        65             |           126,286 |
+| Picnic             | I, III, V                    | 3-L5                                  | ZKP / Symmetric      | Alternate            | Hybrid                  |        32 /        97             |         64 /        65             |  54,732 /  61,028 |
+| SPHINCS+           | I, III, V                    | 256s                                  | Hash (stateless)     | Alternate            | Compliant     [[9](#9)] |                   128             |                     64             |            29,792 |
+| SPHINCS+           | I, III, V                    | 256f                                  | Hash (stateless)     | Alternate            | Compliant     [[9](#9)] |                   128             |                     64             |            49,856 |
 
 ## Explanations
 
@@ -134,6 +143,10 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 
 <a name="ETSI">[ETSI]</a> [Quantum-safe hybrid key exchanges](https://www.etsi.org/deliver/etsi_ts/103700_103799/103744/01.01.01_60/ts_103744v010101p.pdf). ETSI TS 103 744 V1.1.1, December 2020
 
+<a name="ETSIKEM">[ETSIKEM]</a> [Quantum-Safe Public-Key Encryption and Key Encapsulation](https://www.etsi.org/deliver/etsi_tr/103800_103899/103823/01.01.01_60/tr_103823v010101p.pdf), ETSI TR 103 823, version 1.1.1, September 2021
+
+<a name="ETSISIG">[ETSISIG]</a> [Quantum-Safe Signatures](https://www.etsi.org/deliver/etsi_tr/103600_103699/103616/01.01.01_60/tr_103616v010101p.pdf), ETSI TR 103 616, version 1.1.1, September 2021
+
 <a name="KF">[KF]</a> P. Kampanakis and S. Fluhrer, [LMS vs XMSS: Comparion of two Hash-Based Signature Standards](https://eprint.iacr.org/2017/349)
 
 <a name="KPCSA">[KPCSA]</a> P. Kampanakis, P. Panburana, M. Curcio, C. Shroff and M. M. Alam, [Post-Quantum LMS and SPHINCS+ Hash-Based Signatures for UEFI Secure Boot](https://eprint.iacr.org/2021/041.pdf)
@@ -141,6 +154,8 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 <a name="NIST">[NIST]</a> G. Alagic, J. Alperin-Sheriff, D. Apon, D. Cooper, Q. Dang, J. Kelsey, Y.-K. Liu, C. Miller, D. Moody, R. Peralta, R. Perlner, A. Robinson and D. Smith-Tone, [Status Report on the Second Round of the NIST Post-Quantum Cryptography Standardization Process](https://csrc.nist.gov/publications/detail/nistir/8309/final), NISTIR 8309, July 2020
 
 <a name="NISTSTD">[NISTSTD]</a> D. Cooper, D. Apon, Q. Dang, M. Davidson, M. Dworkin, and C. Miller, [Recommendation for Stateful Hash-Based Signature Schemes](https://doi.org/10.6028/NIST.SP.800-208), NIST Special Publication 800-208, October 2020
+
+<a name="NLNCSA">[NLNCSA]</a> [Prepare for the threat of quantum-computers](https://english.aivd.nl/publications/publications/2022/01/18/prepare-for-the-threat-of-quantumcomputers), 18 January 2022 
 
 <a name="RFC8391">[RFC8391]</a> A. Huelsing, D. Butin, S. Gazdag, J. Rijneveld and A. Mohaisen, [XMSS: eXtended Merkle Signature Scheme](https://datatracker.ietf.org/doc/html/rfc8391), RFC 8391, May 2018
 
@@ -162,15 +177,19 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 
 <a name="6">[6]</a> [ROUND 3 OFFICIAL COMMENT: Rainbow](https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/KFgw5_qCXiI/m/cr66AGOfAgAJ) after [[Beu](#Beu)]
 
-<a name="7">[7]</a> From [[BSI](#BSI)]
+<a name="7">[7]</a> From [[BSI](#BSI)] and [[NLNCSA](#NLNCSA)]
 
 > The mechanisms FrodoKEM-976, FrodoKEM-1344 as well as **Classic McEliece** with the parameters in **Categories 3 and 5** are assessed to be cryptographically suitable to protect confidential.
 
-<a name="8">[8]</a> From [[ANSSI](#ANSSI)] and [[BSI](#BSI)]
+> For PQC, we recommend the most secure algorithms, such as Frodo or **McEliece**.
+
+<a name="8">[8]</a> From [[ANSSI](#ANSSI)], [[BSI](#BSI)] and [[NLNCSA](#NLNCSA)]
 
 > For example, a developer should be able to obtain a security visa for a product implementing FrodoKEM whether NIST decides that FrodoKEM will be one of the first PQC standards or not.
 
 > The mechanisms FrodoKEM-976, **FrodoKEM-1344** as well as Classic McEliece with the parameters in Categories 3 and 5 are assessed to be cryptographically suitable to protect confidential.
+
+> For PQC, we recommend the most secure algorithms, such as **Frodo** or McEliece.
 
 <a name="9">[9]</a> From [[ANSSI](#ANSSI)]
 
