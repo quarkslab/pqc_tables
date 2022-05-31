@@ -26,7 +26,7 @@ We give in notes some additional content, either to justify our results or to gi
 
 > Several governments have published similar position papers recommending to prepare the post-quantum transition. ANSSI’s views are similar to the BSI’s position on many issues (e.g. necessary migration, hybridation, cryptoagility).
 
-Even if these tables are focused on the French context, they may be used in other national context too.
+Even if these tables are focused on the French context, they may be used in other national contexts too.
 
 ### Post-quantum cryptography key exchange mechanisms and their usage for (French) certifications
 
@@ -207,7 +207,7 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 
 <a name="14">[14]</a> Depending on the analysis of the security level (bulletproofing strategies), the security level is IV (strategy #1) or III (strategy #2)
 
-<a name="15">[15]</a> The two attacks in [[TPD](#TPD), [BBCPSTV](#BBCPSTV)] show that the security of GeMSS256, BlueGeMSS256 and RedGeMSS256 are less than level I
+<a name="15">[15]</a> The attacks in [[TPD](#TPD), [BBCPSTV](#BBCPSTV)] show that the security of GeMSS256, BlueGeMSS256 and RedGeMSS256 are less than level I
 
 <a name="16">[16]</a> From [[RFC8554](#RFC8554)]
 
