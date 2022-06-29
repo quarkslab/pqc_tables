@@ -1,0 +1,584 @@
+[
+	{
+		"scheme": "KEM",
+		"name": "Classic McEliece",
+		"levels": [
+			{"level": "1"},
+			{"level": "3"},
+			{"level": "5"}
+		],
+		"type": "code",
+		"NIST": "finalist",
+		"variants": [
+			{
+				"variant": "6960119(f)",
+				"ANSSI": "hybrid",
+				"sk": "13948",
+				"pk": "1047319",
+				"ct": "226",
+				"ss": "32"
+			},
+			{
+				"variant": "8192128(f)",
+				"ANSSI": "hybrid",
+				"sk": "14120",
+				"pk": "1357824",
+				"ct": "240",
+				"ss": "32"
+			}
+		]
+	},
+	{
+		"scheme": "KEM",
+		"name": "CRYSTALS-KYBER",
+		"levels": [
+			{"level": "1"},
+			{"level": "3"},
+			{"level": "5"}
+		],
+		"type": "lattice (structured)",
+		"NIST": "finalist",
+		"variants": [
+			{
+				"variant": "1024",
+				"ANSSI": "hybrid",
+				"sk": "3168",
+				"pk": "1568",
+				"ct": "1568",
+				"ss": "32"
+			}
+		]
+	},
+	{
+		"scheme": "KEM",
+		"name": "NTRU",
+		"levels": [
+			{"level": "1"},
+			{"level": "3"},
+			{"level": "5"}
+		],
+		"type": "lattice (structured)",
+		"NIST": "finalist",
+		"variants": [
+			{
+				"variant": "HPS-4096-821",
+				"ANSSI": "maybe hybrid",
+				"sk": "1590",
+				"pk": "1230",
+				"ct": "1230",
+				"ss": "32"
+			},
+			{
+				"variant": "HPS-4096-821",
+				"ANSSI": "hybrid",
+				"sk": "2366",
+				"pk": "1842",
+				"ct": "1842",
+				"ss": "32"
+			},
+			{
+				"variant": "HRSS-1373",
+				"ANSSI": "hybrid",
+				"sk": "2938",
+				"pk": "2401",
+				"ct": "2401",
+				"ss": "32"
+			}
+		]
+
+	},
+	{
+		"scheme": "KEM",
+		"name": "SABER",
+		"levels": [
+			{"level": "1"},
+			{"level": "3"},
+			{"level": "5"}
+		],
+		"type": "lattice (structured)",
+		"NIST": "finalist",
+		"variants": [
+			{
+				"variant": "FireSaber",
+				"ANSSI": "hybrid",
+				"sk": "3040",
+				"pk": "1312",
+				"ct": "1472",
+				"ss": "32"
+			},
+			{
+				"variant": "FireSaber, compressed",
+				"ANSSI": "hybrid",
+				"sk": "1760",
+				"pk": "1312",
+				"ct": "1472",
+				"ss": "32"
+			},
+			{
+				"variant": "uFireSaber",
+				"ANSSI": "hybrid",
+				"sk": "2912",
+				"pk": "1312",
+				"ct": "1472",
+				"ss": "32"
+			},
+			{
+				"variant": "uFireSaber, compressed",
+				"ANSSI": "hybrid",
+				"sk": "1632",
+				"pk": "1312",
+				"ct": "1472",
+				"ss": "32"
+			}
+		]
+	},
+	{
+		"scheme": "KEM",
+		"name": "BIKE",
+		"levels": [
+			{"level": "1"},
+			{"level": "3"},
+			{"level": "5"}
+		],
+		"type": "code",
+		"NIST": "alternate",
+		"variants": [
+			{
+				"variant": "Level 5",
+				"ANSSI": "hybrid",
+				"sk": "580",
+				"pk": "5122",
+				"pkcode": "10276",
+				"ct": "5154",
+				"ss": "32"
+			}
+		]
+	},
+	{
+		"scheme": "KEM",
+		"name": "FrodoKEM",
+		"levels": [
+			{"level": "1"},
+			{"level": "3"},
+			{"level": "5"}
+		],
+		"type": "lattice",
+		"NIST": "alternate",
+		"variants": [
+			{
+				"variant": "1344",
+				"ANSSI": "hybrid",
+				"sk": "43088",
+				"pk": "21520",
+				"ct": "21632",
+				"ss": "32"
+			}
+		]
+	},
+	{
+		"scheme": "KEM",
+		"name": "HQC",
+		"levels": [
+			{"level": "1"},
+			{"level": "3"},
+			{"level": "5"}
+		],
+		"type": "code",
+		"NIST": "alternate",
+		"variants": [
+			{
+				"variant": "256",
+				"ANSSI": "hybrid",
+				"sk": "7285",
+				"pk": "7245",
+				"ct": "14469",
+				"ss": "64"
+			}
+		]
+	},
+	{
+		"scheme": "KEM",
+		"name": "NTRU Prime",
+		"levels": [
+			{"level": "1"},
+			{"level": "2"},
+			{"level": "3"},
+			{"level": "4"},
+			{"level": "5"}
+		],
+		"type": "lattice (structured)",
+		"NIST": "alternate",
+		"variants": [
+			{
+				"variant": "sntrup953",
+				"ANSSI": "maybe hybrid",
+				"sk": "2254",
+				"pk": "1505",
+				"ct": "1349",
+				"ss": "32"
+			},
+			{
+				"variant": "ntrulpr953",
+				"ANSSI": "maybe hybrid",
+				"sk": "1652",
+				"pk": "1349",
+				"ct": "1477",
+				"ss": "32"
+			},
+			{
+				"variant": "sntrup1013",
+				"ANSSI": "hybrid",
+				"sk": "2417",
+				"pk": "1623",
+				"ct": "1455",
+				"ss": "32"
+			},
+			{
+				"variant": "ntrulpr1013",
+				"ANSSI": "hybrid",
+				"sk": "1773",
+				"pk": "1455",
+				"ct": "1583",
+				"ss": "32"
+			},
+			{
+				"variant": "sntrup1277",
+				"ANSSI": "hybrid",
+				"sk": "3059",
+				"pk": "2067",
+				"ct": "1847",
+				"ss": "32"
+			},
+			{
+				"variant": "ntrulpr1277",
+				"ANSSI": "hybrid",
+				"sk": "2231",
+				"pk": "1847",
+				"ct": "1975",
+				"ss": "32"
+			}
+
+		]
+	},
+	{
+		"scheme": "KEM",
+		"name": "SIKE",
+		"levels": [
+			{"level": "1"},
+			{"level": "2"},
+			{"level": "3"},
+			{"level": "5"}
+		],
+		"type": "isogenies",
+		"NIST": "alternate",
+		"variants": [
+			{
+				"variant": "p751",
+				"ANSSI": "hybrid",
+				"sk": "644",
+				"pk": "564",
+				"ct": "596",
+				"ss": "32"
+			},
+			{
+				"variant": "p751, compressed",
+				"ANSSI": "hybrid",
+				"sk": "602",
+				"pk": "335",
+				"ct": "410",
+				"ss": "32"
+			}
+		]
+	},
+	{
+		"scheme": "Signature",
+		"name": "LMS",
+		"levels": [
+			{"level": "5"}
+		],
+		"type": "hash (stateful)",
+		"NIST": "standard",
+		"variants": [
+			{
+				"variant": "LMS_SHA256_M32_H..",
+				"ANSSI": "compliant",
+				"sk": "dependent",
+				"pk": "56",
+				"sig": "dependent"
+			}
+		]
+	},
+	{
+		"scheme": "Signature",
+		"name": "HSS",
+		"levels": [
+			{"level": "5"}
+		],
+		"type": "hash (stateful)",
+		"NIST": "standard",
+		"variants": [
+			{
+				"variant": "with LMS_SHA256_M32_H..",
+				"ANSSI": "compliant",
+				"sk": "dependent",
+				"pk": "60",
+				"sig": "dependent"
+			}
+		]
+	},
+	{
+		"scheme": "Signature",
+		"name": "XMSS",
+		"levels": [
+			{"level": "2"},
+			{"level": "5"}
+		],
+		"type": "hash (stateful)",
+		"NIST": "standard",
+		"variants": [
+			{
+				"variant": "XMSS-SHA2_.._256",
+				"ANSSI": "compliant",
+				"sk": "dependent",
+				"pk": "68",
+				"sig": "dependent"
+			},
+			{
+				"variant": "XMSS-SHAKE_.._512",
+				"ANSSI": "compliant",
+				"sk": "dependent",
+				"pk": "132",
+				"sig": "dependent"
+			}
+		]
+	},
+	{
+		"scheme": "Signature",
+		"name": "XMSS-MT",
+		"levels": [
+			{"level": "2"},
+			{"level": "5"}
+		],
+		"type": "hash (stateful)",
+		"NIST": "standard",
+		"variants": [
+			{
+				"variant": "XMSSMT-SHA2_../.._256",
+				"ANSSI": "compliant",
+				"sk": "dependent",
+				"pk": "68",
+				"sig": "dependent"
+			},
+			{
+				"variant": "XMSSMT-SHAKE_../.._512",
+				"ANSSI": "compliant",
+				"sk": "dependent",
+				"pk": "132",
+				"sig": "dependent"
+			}
+		]
+	},
+	{
+		"scheme": "Signature",
+		"name": "CRYSTALS-DILITHIUM",
+		"levels": [
+			{"level": "2"},
+			{"level": "3"},
+			{"level": "5"}
+		],
+		"type": "lattice (structured)",
+		"NIST": "finalist",
+		"variants": [
+			{
+				"variant": "5",
+				"ANSSI": "hybrid",
+				"sk": "4880",
+				"pk": "2592",
+				"sig": "4595"
+			}
+		]
+	},
+	{
+		"scheme": "Signature",
+		"name": "Falcon",
+		"levels": [
+			{"level": "1"},
+			{"level": "5"}
+		],
+		"type": "lattice (structured)",
+		"NIST": "finalist",
+		"variants": [
+			{
+				"variant": "1024",
+				"ANSSI": "hybrid",
+				"sk": "2305",
+				"pk": "1793",
+				"sig": "1280",
+				"sigcode": "1330"
+			}
+		]
+	},
+	{
+		"scheme": "Signature",
+		"name": "Rainbow",
+		"levels": [
+			{"level": "1"},
+			{"level": "3"},
+			{"level": "5"}
+		],
+		"type": "multivariate",
+		"NIST": "finalist",
+		"variants": [
+			{
+				"variant": "UOV parameters SL5-Standard",
+				"ANSSI": "hybrid",
+				"sk": "2451096",
+				"skcode": "2451128",
+				"pk": "2869440",
+				"pkcode": "3087600",
+				"sig": "264"
+			},
+			{
+				"variant": "UOV parameters SL5-CZ",
+				"ANSSI": "hybrid",
+				"sk": "2451096",
+				"skcode": "2451128",
+				"pkcode": "655944",
+				"sig": "264"
+			}
+		]
+	},
+	{
+		"scheme": "Signature",
+		"name": "GeMSS",
+		"levels": [
+			{"level": "< 1"}
+		],
+		"type": "multivariate",
+		"NIST": "alternate",
+		"variants": [
+			{
+				"variant": "GeMSS256",
+				"ANSSI": "not compliant",
+				"sk": "32",
+				"pk": "3040700",
+				"sig": "72"
+			},
+			{
+				"variant": "BlueGeMSS256",
+				"ANSSI": "not compliant",
+				"sk": "32",
+				"pk": "3087963",
+				"sig": "74"
+			},
+			{
+				"variant": "CyanGeMSS256",
+				"ANSSI": "not compliant",
+				"sk": "32",
+				"pk": "3272017",
+				"sig": "66"
+			},
+			{
+				"variant": "RedGeMSS256",
+				"ANSSI": "not compliant",
+				"sk": "32",
+				"pk": "3135591",
+				"sig": "75"
+			},
+			{
+				"variant": "MagentaGeMSS256",
+				"ANSSI": "not compliant",
+				"sk": "32",
+				"pk": "3321717",
+				"sig": "67"
+			},
+			{
+				"variant": "WhiteGeMSS256",
+				"ANSSI": "not compliant",
+				"sk": "32",
+				"pk": "3222691",
+				"sig": "65"
+			}
+
+		]
+	},
+	{
+		"scheme": "Signature",
+		"name": "Picnic",
+		"levels": [
+			{"level": "1"},
+			{"level": "3"},
+			{"level": "5"}
+		],
+		"type": "ZKP / symmetric",
+		"NIST": "alternate",
+		"variants": [
+			{
+				"variant": "L5-FS",
+				"ANSSI": "hybrid",
+				"sk": "32",
+				"skcode": "97",
+				"pk": "64",
+				"pkcode": "65",
+				"sig": "132856",
+				"sigcode": "132876"
+			},
+			{
+				"variant": "L5-UR",
+				"ANSSI": "hybrid",
+				"sk": "32",
+				"skcode": "97",
+				"pk": "64",
+				"pkcode": "65",
+				"sig": "209506",
+				"sigcode": "209526"
+			},
+			{
+				"variant": "L5-full",
+				"ANSSI": "hybrid",
+				"sk": "32",
+				"skcode": "97",
+				"pk": "64",
+				"pkcode": "65",
+				"sig": "126,286"
+			},
+			{
+				"variant": "L5-full",
+				"ANSSI": "hybrid",
+				"sk": "32",
+				"skcode": "97",
+				"pk": "64",
+				"pkcode": "65",
+				"sig": "54732",
+				"sigcode": "61028"
+			}
+		]
+	},
+	{
+		"scheme": "Signature",
+		"name": "SPHINCS+",
+		"levels": [
+			{"level": "1"},
+			{"level": "3"},
+			{"level": "5"}
+		],
+		"type": "hash (stateless)",
+		"NIST": "alternate",
+		"variants": [
+			{
+				"variant": "256s",
+				"ANSSI": "compliant",
+				"sk": "128",
+				"pk": "64",
+				"sig": "29792"
+			},
+			{
+				"variant": "256f",
+				"ANSSI": "compliant",
+				"sk": "128",
+				"pk": "64",
+				"sig": "49856"
+			}
+		]
+	}
+]
