@@ -16,6 +16,9 @@
 					{"level": "5"}
 				],
 				"ANSSI": "hybrid",
+				"notesANSSI": [
+					{"note": "7"}
+				],
 				"sk": "13948",
 				"pk": "1047319",
 				"ct": "226",
@@ -27,6 +30,9 @@
 					{"level": "5"}
 				],
 				"ANSSI": "hybrid",
+				"notesANSSI": [
+					{"note": "7"}
+				],
 				"sk": "14120",
 				"pk": "1357824",
 				"ct": "240",
@@ -51,6 +57,9 @@
 					{"level": "5"}
 				],
 				"ANSSI": "hybrid",
+				"notesANSSI": [
+					{"note": "13"}
+				],
 				"sk": "3168",
 				"pk": "1568",
 				"ct": "1568",
@@ -71,11 +80,17 @@
 		"variants": [
 			{
 				"variant": "HPS-4096-821",
+				"notesvariant": [
+					{"note": "3"}
+				],
 				"levels": [
 					{"level": "3"},
 					{"level": "5"}
 				],
 				"ANSSI": "maybe hybrid",
+				"notesANSSI": [
+					{"note": "1"}
+				],
 				"sk": "1590",
 				"pk": "1230",
 				"ct": "1230",
@@ -83,6 +98,10 @@
 			},
 			{
 				"variant": "HPS-4096-1229",
+				"notesvariant": [
+					{"note": "2"},
+					{"note": "3"}
+				],
 				"levels": [
 					{"level": "5"}
 				],
@@ -94,6 +113,10 @@
 			},
 			{
 				"variant": "HRSS-1373",
+				"notesvariant": [
+					{"note": "2"},
+					{"note": "4"}
+				],
 				"levels": [
 					{"level": "5"}
 				],
@@ -205,6 +228,9 @@
 					{"level": "5"}
 				],
 				"ANSSI": "hybrid",
+				"notesANSSI": [
+					{"note": "8"}
+				],
 				"sk": "43088",
 				"pk": "21520",
 				"ct": "21632",
@@ -251,6 +277,9 @@
 		"variants": [
 			{
 				"variant": "sntrup953",
+				"notesvariant": [
+					{"note": "14"}
+				],
 				"levels": [
 					{"level": "3"},
 					{"level": "4"}
@@ -263,6 +292,9 @@
 			},
 			{
 				"variant": "ntrulpr953",
+				"notesvariant": [
+					{"note": "14"}
+				],
 				"levels": [
 					{"level": "3"},
 					{"level": "4"}
@@ -362,8 +394,14 @@
 		"levels": [
 			{"level": "5"}
 		],
+		"noteslevels": [
+			{"note": "18"}
+		],
 		"type": "hash (stateful)",
 		"NIST": "standard",
+		"notesNIST": [
+			{"note": "10"}
+		],
 		"variants": [
 			{
 				"variant": "LMS_SHA256_M32_H..",
@@ -371,6 +409,9 @@
 					{"level": "5"}
 				],
 				"ANSSI": "compliant",
+				"notesANSSI": [
+					{"note": "9"}
+				],
 				"sk": "dependent",
 				"pk": "56",
 				"sig": "dependent"
@@ -383,8 +424,14 @@
 		"levels": [
 			{"level": "5"}
 		],
+		"noteslevels": [
+			{"note": "18"}
+		],
 		"type": "hash (stateful)",
 		"NIST": "standard",
+		"notesNIST": [
+			{"note": "10"}
+		],
 		"variants": [
 			{
 				"variant": "with LMS_SHA256_M32_H..",
@@ -392,6 +439,9 @@
 					{"level": "5"}
 				],
 				"ANSSI": "compliant",
+				"notesANSSI": [
+					{"note": "9"}
+				],
 				"sk": "dependent",
 				"pk": "60",
 				"sig": "dependent"
@@ -405,8 +455,14 @@
 			{"level": "2"},
 			{"level": "5"}
 		],
+		"noteslevels": [
+			{"note": "17"}
+		],
 		"type": "hash (stateful)",
 		"NIST": "standard",
+		"notesNIST": [
+			{"note": "10"}
+		],
 		"variants": [
 			{
 				"variant": "XMSS-SHA2_.._256",
@@ -414,6 +470,9 @@
 					{"level": "5"}
 				],
 				"ANSSI": "compliant",
+				"notesANSSI": [
+					{"note": "9"}
+				],
 				"sk": "dependent",
 				"pk": "68",
 				"sig": "dependent"
@@ -424,6 +483,9 @@
 					{"level": "5"}
 				],
 				"ANSSI": "compliant",
+				"notesANSSI": [
+					{"note": "9"}
+				],
 				"sk": "dependent",
 				"pk": "132",
 				"sig": "dependent"
@@ -437,8 +499,14 @@
 			{"level": "2"},
 			{"level": "5"}
 		],
+		"noteslevels": [
+			{"note": "17"}
+		],
 		"type": "hash (stateful)",
 		"NIST": "standard",
+		"notesNIST": [
+			{"note": "10"}
+		],
 		"variants": [
 			{
 				"variant": "XMSSMT-SHA2_../.._256",
@@ -446,6 +514,9 @@
 					{"level": "5"}
 				],
 				"ANSSI": "compliant",
+				"notesANSSI": [
+					{"note": "9"}
+				],
 				"sk": "dependent",
 				"pk": "68",
 				"sig": "dependent"
@@ -456,6 +527,9 @@
 					{"level": "5"}
 				],
 				"ANSSI": "compliant",
+				"notesANSSI": [
+					{"note": "9"}
+				],
 				"sk": "dependent",
 				"pk": "132",
 				"sig": "dependent"
@@ -479,6 +553,9 @@
 					{"level": "5"}
 				],
 				"ANSSI": "hybrid",
+				"notesANSSI": [
+					{"note": "13"}
+				],
 				"sk": "4880",
 				"pk": "2592",
 				"sig": "4595"
@@ -501,6 +578,9 @@
 					{"level": "5"}
 				],
 				"ANSSI": "hybrid",
+				"notesANSSI": [
+					{"note": "13"}
+				],
 				"sk": "2305",
 				"pk": "1793",
 				"sig": "1280",
@@ -511,6 +591,9 @@
 	{
 		"scheme": "Signature",
 		"name": "Rainbow",
+		"noteslevels": [
+			{"note": "6"}
+		],
 		"levels": [
 			{"level": "1"},
 			{"level": "3"},
@@ -549,6 +632,9 @@
 		"name": "GeMSS",
 		"levels": [
 			{"level": "< 1"}
+		],
+		"noteslevels": [
+			{"note": "15"}
 		],
 		"type": "multivariate",
 		"NIST": "alternate",
@@ -698,6 +784,9 @@
 					{"level": "5"}
 				],
 				"ANSSI": "compliant",
+				"notesANSSI": [
+					{"note": "9"}
+				],
 				"sk": "128",
 				"pk": "64",
 				"sig": "29792"
@@ -708,6 +797,9 @@
 					{"level": "5"}
 				],
 				"ANSSI": "compliant",
+				"notesANSSI": [
+					{"note": "9"}
+				],
 				"sk": "128",
 				"pk": "64",
 				"sig": "29792"
@@ -718,6 +810,9 @@
 					{"level": "5"}
 				],
 				"ANSSI": "compliant",
+				"notesANSSI": [
+					{"note": "9"}
+				],
 				"sk": "128",
 				"pk": "64",
 				"sig": "49856"
@@ -728,6 +823,9 @@
 					{"level": "5"}
 				],
 				"ANSSI": "compliant",
+				"notesANSSI": [
+					{"note": "9"}
+				],
 				"sk": "128",
 				"pk": "64",
 				"sig": "49856"
