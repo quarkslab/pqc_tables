@@ -12,6 +12,9 @@
 		"variants": [
 			{
 				"variant": "6960119(f)",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "13948",
 				"pk": "1047319",
@@ -20,6 +23,9 @@
 			},
 			{
 				"variant": "8192128(f)",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "14120",
 				"pk": "1357824",
@@ -41,6 +47,9 @@
 		"variants": [
 			{
 				"variant": "1024",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "3168",
 				"pk": "1568",
@@ -62,6 +71,10 @@
 		"variants": [
 			{
 				"variant": "HPS-4096-821",
+				"levels": [
+					{"level": "3"},
+					{"level": "5"}
+				],
 				"ANSSI": "maybe hybrid",
 				"sk": "1590",
 				"pk": "1230",
@@ -69,7 +82,10 @@
 				"ss": "32"
 			},
 			{
-				"variant": "HPS-4096-821",
+				"variant": "HPS-4096-1229",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "2366",
 				"pk": "1842",
@@ -78,6 +94,9 @@
 			},
 			{
 				"variant": "HRSS-1373",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "2938",
 				"pk": "2401",
@@ -100,6 +119,9 @@
 		"variants": [
 			{
 				"variant": "FireSaber",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "3040",
 				"pk": "1312",
@@ -108,6 +130,9 @@
 			},
 			{
 				"variant": "FireSaber, compressed",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "1760",
 				"pk": "1312",
@@ -116,6 +141,9 @@
 			},
 			{
 				"variant": "uFireSaber",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "2912",
 				"pk": "1312",
@@ -124,6 +152,9 @@
 			},
 			{
 				"variant": "uFireSaber, compressed",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "1632",
 				"pk": "1312",
@@ -145,6 +176,9 @@
 		"variants": [
 			{
 				"variant": "Level 5",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "580",
 				"pk": "5122",
@@ -167,6 +201,9 @@
 		"variants": [
 			{
 				"variant": "1344",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "43088",
 				"pk": "21520",
@@ -188,6 +225,9 @@
 		"variants": [
 			{
 				"variant": "256",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "7285",
 				"pk": "7245",
@@ -211,6 +251,10 @@
 		"variants": [
 			{
 				"variant": "sntrup953",
+				"levels": [
+					{"level": "3"},
+					{"level": "4"}
+				],
 				"ANSSI": "maybe hybrid",
 				"sk": "2254",
 				"pk": "1505",
@@ -219,6 +263,10 @@
 			},
 			{
 				"variant": "ntrulpr953",
+				"levels": [
+					{"level": "3"},
+					{"level": "4"}
+				],
 				"ANSSI": "maybe hybrid",
 				"sk": "1652",
 				"pk": "1349",
@@ -227,6 +275,9 @@
 			},
 			{
 				"variant": "sntrup1013",
+				"levels": [
+					{"level": "4"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "2417",
 				"pk": "1623",
@@ -235,6 +286,9 @@
 			},
 			{
 				"variant": "ntrulpr1013",
+				"levels": [
+					{"level": "4"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "1773",
 				"pk": "1455",
@@ -243,6 +297,9 @@
 			},
 			{
 				"variant": "sntrup1277",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "3059",
 				"pk": "2067",
@@ -251,6 +308,9 @@
 			},
 			{
 				"variant": "ntrulpr1277",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "2231",
 				"pk": "1847",
@@ -274,6 +334,9 @@
 		"variants": [
 			{
 				"variant": "p751",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "644",
 				"pk": "564",
@@ -282,6 +345,9 @@
 			},
 			{
 				"variant": "p751, compressed",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "602",
 				"pk": "335",
@@ -301,6 +367,9 @@
 		"variants": [
 			{
 				"variant": "LMS_SHA256_M32_H..",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "compliant",
 				"sk": "dependent",
 				"pk": "56",
@@ -319,6 +388,9 @@
 		"variants": [
 			{
 				"variant": "with LMS_SHA256_M32_H..",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "compliant",
 				"sk": "dependent",
 				"pk": "60",
@@ -338,6 +410,9 @@
 		"variants": [
 			{
 				"variant": "XMSS-SHA2_.._256",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "compliant",
 				"sk": "dependent",
 				"pk": "68",
@@ -345,6 +420,9 @@
 			},
 			{
 				"variant": "XMSS-SHAKE_.._512",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "compliant",
 				"sk": "dependent",
 				"pk": "132",
@@ -364,6 +442,9 @@
 		"variants": [
 			{
 				"variant": "XMSSMT-SHA2_../.._256",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "compliant",
 				"sk": "dependent",
 				"pk": "68",
@@ -371,6 +452,9 @@
 			},
 			{
 				"variant": "XMSSMT-SHAKE_../.._512",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "compliant",
 				"sk": "dependent",
 				"pk": "132",
@@ -391,6 +475,9 @@
 		"variants": [
 			{
 				"variant": "5",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "4880",
 				"pk": "2592",
@@ -410,6 +497,9 @@
 		"variants": [
 			{
 				"variant": "1024",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "2305",
 				"pk": "1793",
@@ -431,6 +521,9 @@
 		"variants": [
 			{
 				"variant": "UOV parameters SL5-Standard",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "2451096",
 				"skcode": "2451128",
@@ -440,6 +533,9 @@
 			},
 			{
 				"variant": "UOV parameters SL5-CZ",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "2451096",
 				"skcode": "2451128",
@@ -459,6 +555,9 @@
 		"variants": [
 			{
 				"variant": "GeMSS256",
+				"levels": [
+					{"level": "< 1"}
+				],
 				"ANSSI": "not compliant",
 				"sk": "32",
 				"pk": "3040700",
@@ -466,6 +565,9 @@
 			},
 			{
 				"variant": "BlueGeMSS256",
+				"levels": [
+					{"level": "< 1"}
+				],
 				"ANSSI": "not compliant",
 				"sk": "32",
 				"pk": "3087963",
@@ -473,6 +575,9 @@
 			},
 			{
 				"variant": "CyanGeMSS256",
+				"levels": [
+					{"level": "< 1"}
+				],
 				"ANSSI": "not compliant",
 				"sk": "32",
 				"pk": "3272017",
@@ -480,6 +585,9 @@
 			},
 			{
 				"variant": "RedGeMSS256",
+				"levels": [
+					{"level": "< 1"}
+				],
 				"ANSSI": "not compliant",
 				"sk": "32",
 				"pk": "3135591",
@@ -487,6 +595,9 @@
 			},
 			{
 				"variant": "MagentaGeMSS256",
+				"levels": [
+					{"level": "< 1"}
+				],
 				"ANSSI": "not compliant",
 				"sk": "32",
 				"pk": "3321717",
@@ -494,6 +605,9 @@
 			},
 			{
 				"variant": "WhiteGeMSS256",
+				"levels": [
+					{"level": "< 1"}
+				],
 				"ANSSI": "not compliant",
 				"sk": "32",
 				"pk": "3222691",
@@ -515,6 +629,9 @@
 		"variants": [
 			{
 				"variant": "L5-FS",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "32",
 				"skcode": "97",
@@ -525,6 +642,9 @@
 			},
 			{
 				"variant": "L5-UR",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "32",
 				"skcode": "97",
@@ -535,6 +655,9 @@
 			},
 			{
 				"variant": "L5-full",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "32",
 				"skcode": "97",
@@ -544,6 +667,9 @@
 			},
 			{
 				"variant": "L5-full",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "hybrid",
 				"sk": "32",
 				"skcode": "97",
@@ -559,6 +685,7 @@
 		"name": "SPHINCS+",
 		"levels": [
 			{"level": "1"},
+			{"level": "2"},
 			{"level": "3"},
 			{"level": "5"}
 		],
@@ -566,14 +693,40 @@
 		"NIST": "alternate",
 		"variants": [
 			{
-				"variant": "256s",
+				"variant": "SHAKE-256s",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "compliant",
 				"sk": "128",
 				"pk": "64",
 				"sig": "29792"
 			},
 			{
-				"variant": "256f",
+				"variant": "SHA2-256s",
+				"levels": [
+					{"level": "5"}
+				],
+				"ANSSI": "compliant",
+				"sk": "128",
+				"pk": "64",
+				"sig": "29792"
+			},
+			{
+				"variant": "SHAKE-256f",
+				"levels": [
+					{"level": "5"}
+				],
+				"ANSSI": "compliant",
+				"sk": "128",
+				"pk": "64",
+				"sig": "49856"
+			},
+			{
+				"variant": "SHA2-256f",
+				"levels": [
+					{"level": "5"}
+				],
 				"ANSSI": "compliant",
 				"sk": "128",
 				"pk": "64",
