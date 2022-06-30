@@ -35,6 +35,17 @@ def format_doc_code_data(variant, key):
 def format_level(scheme):
     return ", ".join([roman_number(i["level"]) for i in scheme["levels"]])
 
+def format_variant_level(variant):
+    if len(variant["levels"]) == 1:
+        if variant["levels"][0]["level"] == "5":
+            return ""
+        elif variant["levels"][0]["level"] == "< 1":
+            return ""
+        else:
+            return " (level {0})".format(roman_number(variant["levels"][0]["level"]))
+    else:
+        return " (levels " + " / ".join([roman_number(i["level"]) for i in variant["levels"]]) + ")"
+
 # def simple_tables(data):
     # names = [scheme["name"] for scheme in data]
     # lname = max([len(i) for i in names])
@@ -53,38 +64,47 @@ def format_level(scheme):
         # print("| " + format_name.format(names[i]) + " | " + format_variants.format(variants[i]) + " |")
 
 def complete_tables(data):
+    KEM = []
+    signature = []
     for scheme in data:
-        for variant in scheme["variants"]:
-            s = ""
-            if scheme["scheme"] == "KEM":
-                s = "{0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} | {9}".format(
-                        scheme["name"],
-                        format_level(scheme),
-                        variant["variant"],
-                        scheme["type"],
-                        scheme["NIST"],
-                        variant["ANSSI"],
-                        format_doc_code_data(variant, "sk"),
-                        format_doc_code_data(variant, "pk"),
-                        format_doc_code_data(variant, "ct"),
-                        format_doc_code_data(variant, "ss"))
-                print(s)
+        if scheme["scheme"] == "KEM":
+            KEM.append(scheme)
+        elif scheme["scheme"] == "Signature":
+            signature.append(scheme)
 
-            if scheme["scheme"] == "Signature":
-                sig = format_number(variant["sig"])
-                if "sigcode" in variant:
-                    sig = sig + " / " + format_number(variant["sigcode"])
-                s = "{0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8}".format(
-                        scheme["name"],
-                        format_level(scheme),
-                        variant["variant"],
-                        scheme["type"],
-                        scheme["NIST"],
-                        variant["ANSSI"],
-                        format_doc_code_data(variant, "sk"),
-                        format_doc_code_data(variant, "pk"),
-                        format_doc_code_data(variant, "sig"))
-                print(s)
+    print("KEM | Security Levels | Variant (best security levels) | Type | | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) | pk size (bytes) | ct size (bytes) | ss size (bytes) |")
+    print("| --- | --- | --- | --- | --- | --- | --- |  --- | --- |")
+    for scheme in KEM:
+        for variant in scheme["variants"]:
+            format_variant_level(variant)
+            s = "| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} | {9} |".format(
+                    scheme["name"],
+                    format_level(scheme),
+                    variant["variant"] + format_variant_level(variant),
+                    scheme["type"],
+                    scheme["NIST"],
+                    variant["ANSSI"],
+                    format_doc_code_data(variant, "sk"),
+                    format_doc_code_data(variant, "pk"),
+                    format_doc_code_data(variant, "ct"),
+                    format_doc_code_data(variant, "ss"))
+            print(s)
+
+    print("| Signature | Security Levels | Variants (best security levels) | Type | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) |  pk size (bytes) | sig size (bytes) |")
+    print("| --- | --- | --- | --- | --- | --- | --- |  --- | --- |")
+    for scheme in signature:
+        for variant in scheme["variants"]:
+            s = "| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |".format(
+                    scheme["name"],
+                    format_level(scheme),
+                    variant["variant"] + format_variant_level(variant),
+                    scheme["type"],
+                    scheme["NIST"],
+                    variant["ANSSI"],
+                    format_doc_code_data(variant, "sk"),
+                    format_doc_code_data(variant, "pk"),
+                    format_doc_code_data(variant, "sig"))
+            print(s)
 
 filer = open("db.json")
 
