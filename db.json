@@ -107,9 +107,21 @@
 				],
 				"ANSSI": "hybrid",
 				"sk": "2366",
+				"notessk": [
+					{"note": "5"}
+				],
 				"pk": "1842",
+				"notespk": [
+					{"note": "5"}
+				],
 				"ct": "1842",
-				"ss": "32"
+				"notesct": [
+					{"note": "5"}
+				],
+				"ss": "32",
+				"notesss": [
+					{"note": "5"}
+				]
 			},
 			{
 				"variant": "HRSS-1373",
@@ -122,9 +134,21 @@
 				],
 				"ANSSI": "hybrid",
 				"sk": "2938",
+				"notessk": [
+					{"note": "5"}
+				],
 				"pk": "2401",
+				"notespk": [
+					{"note": "5"}
+				],
 				"ct": "2401",
-				"ss": "32"
+				"notesct": [
+					{"note": "5"}
+				],
+				"ss": "32",
+				"notesss": [
+					{"note": "5"}
+				]
 			}
 		]
 
@@ -158,9 +182,21 @@
 				],
 				"ANSSI": "hybrid",
 				"sk": "1760",
+				"notessk": [
+					{"note": "11"}
+				],
 				"pk": "1312",
+				"notespk": [
+					{"note": "12"}
+				],
 				"ct": "1472",
-				"ss": "32"
+				"notesct": [
+					{"note": "12"}
+				],
+				"ss": "32",
+				"notesss": [
+					{"note": "12"}
+				]
 			},
 			{
 				"variant": "uFireSaber",
@@ -180,9 +216,21 @@
 				],
 				"ANSSI": "hybrid",
 				"sk": "1632",
+				"notessk": [
+					{"note": "12"}
+				],
 				"pk": "1312",
+				"notespk": [
+					{"note": "12"}
+				],
 				"ct": "1472",
-				"ss": "32"
+				"notesct": [
+					{"note": "12"}
+				],
+				"ss": "32",
+				"notesss": [
+					{"note": "12"}
+				]
 			}
 		]
 	},
@@ -404,7 +452,7 @@
 		],
 		"variants": [
 			{
-				"variant": "LMS_SHA256_M32_H..",
+				"variant": "`LMS_SHA256_M32_H..`",
 				"levels": [
 					{"level": "5"}
 				],
@@ -434,7 +482,7 @@
 		],
 		"variants": [
 			{
-				"variant": "with LMS_SHA256_M32_H..",
+				"variant": "with `LMS_SHA256_M32_H..`",
 				"levels": [
 					{"level": "5"}
 				],
@@ -465,7 +513,7 @@
 		],
 		"variants": [
 			{
-				"variant": "XMSS-SHA2_.._256",
+				"variant": "`XMSS-SHA2_.._256`",
 				"levels": [
 					{"level": "5"}
 				],
@@ -478,7 +526,7 @@
 				"sig": "dependent"
 			},
 			{
-				"variant": "XMSS-SHAKE_.._512",
+				"variant": "`XMSS-SHAKE_.._512`",
 				"levels": [
 					{"level": "5"}
 				],
@@ -509,7 +557,7 @@
 		],
 		"variants": [
 			{
-				"variant": "XMSSMT-SHA2_../.._256",
+				"variant": "`XMSSMT-SHA2_../.._256`",
 				"levels": [
 					{"level": "5"}
 				],
@@ -522,7 +570,7 @@
 				"sig": "dependent"
 			},
 			{
-				"variant": "XMSSMT-SHAKE_../.._512",
+				"variant": "`XMSSMT-SHAKE_../.._512`",
 				"levels": [
 					{"level": "5"}
 				],
@@ -557,6 +605,9 @@
 					{"note": "13"}
 				],
 				"sk": "4880",
+				"notessk": [
+					{"note": "5"}
+				],
 				"pk": "2592",
 				"sig": "4595"
 			}
@@ -582,6 +633,9 @@
 					{"note": "13"}
 				],
 				"sk": "2305",
+				"notessk": [
+					{"note": "5"}
+				],
 				"pk": "1793",
 				"sig": "1280",
 				"sigcode": "1330"
@@ -609,10 +663,25 @@
 				],
 				"ANSSI": "hybrid",
 				"sk": "2451096",
+				"notessk": [
+					{"note": "19"}
+				],
 				"skcode": "2451128",
+				"notesskcode": [
+					{"note": "20"}
+				],
 				"pk": "2869440",
+				"notespk": [
+					{"note": "6"}
+				],
 				"pkcode": "3087600",
-				"sig": "264"
+				"notespkcode": [
+					{"note": "20"}
+				],
+				"sig": "264",
+				"notessig": [
+					{"note": "20"}
+				]
 			},
 			{
 				"variant": "UOV parameters SL5-CZ",
@@ -621,9 +690,21 @@
 				],
 				"ANSSI": "hybrid",
 				"sk": "2451096",
+				"notessk": [
+					{"note": "19"}
+				],
 				"skcode": "2451128",
+				"notesskcode": [
+					{"note": "20"}
+				],
 				"pkcode": "655944",
-				"sig": "264"
+				"notespkcode": [
+					{"note": "20"}
+				],
+				"sig": "264",
+				"notessig": [
+					{"note": "20"}
+				]
 			}
 		]
 	},
@@ -752,7 +833,7 @@
 				"sig": "126,286"
 			},
 			{
-				"variant": "L5-full",
+				"variant": "3-L5",
 				"levels": [
 					{"level": "5"}
 				],

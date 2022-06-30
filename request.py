@@ -20,7 +20,7 @@ def roman_number(i):
 def format_number(i):
     if i.isdigit():
         return "{:,}".format(int(i))
-    return i
+    return i.capitalize()
 
 # t can be a scheme (genereral) or a variant
 # key is the key for which "notekey" is used
@@ -38,11 +38,11 @@ def format_notes(t, key):
 def format_doc_code_data(variant, key):
     keycode = key + "code"
     if key in variant and keycode in variant :
-        return format_number(variant[key]) + " / " + format_number(variant[keycode])
+        return format_number(variant[key]) + format_notes(variant, key) + " / " + format_number(variant[keycode]) + format_notes(variant, keycode)
     elif key in variant:
-        return format_number(variant[key])
+        return format_number(variant[key]) + format_notes(variant, key)
     else:
-        return format_number(variant[keycode])
+        return format_number(variant[keycode]) + format_notes(variant, keycode)
 
 def format_level(scheme):
     return ", ".join([roman_number(i["level"]) for i in scheme["levels"]])
@@ -93,9 +93,9 @@ def complete_tables(data):
                     scheme["name"],
                     format_level(scheme),
                     variant["variant"] + format_variant_level(variant) + format_notes(variant, "variant"),
-                    scheme["type"],
-                    scheme["NIST"],
-                    variant["ANSSI"] + format_notes(variant, "ANSSI"),
+                    scheme["type"].capitalize(),
+                    scheme["NIST"].capitalize(),
+                    variant["ANSSI"].capitalize() + format_notes(variant, "ANSSI"),
                     format_doc_code_data(variant, "sk"),
                     format_doc_code_data(variant, "pk"),
                     format_doc_code_data(variant, "ct"),
@@ -112,9 +112,9 @@ def complete_tables(data):
                     scheme["name"],
                     format_level(scheme) + format_notes(scheme, "levels"),
                     variant["variant"] + format_variant_level(variant),
-                    scheme["type"],
-                    scheme["NIST"] + format_notes(scheme, "NIST"),
-                    variant["ANSSI"] + format_notes(variant, "ANSSI"),
+                    scheme["type"].capitalize(),
+                    scheme["NIST"].capitalize() + format_notes(scheme, "NIST"),
+                    variant["ANSSI"].capitalize() + format_notes(variant, "ANSSI"),
                     format_doc_code_data(variant, "sk"),
                     format_doc_code_data(variant, "pk"),
                     format_doc_code_data(variant, "sig"))
