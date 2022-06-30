@@ -84,7 +84,7 @@ def complete_tables(data):
         elif scheme["scheme"] == "Signature":
             signature.append(scheme)
 
-    print("KEM | Security Levels | Variant (best security levels) | Type | | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) | pk size (bytes) | ct size (bytes) | ss size (bytes) |")
+    print("| KEM | Security Levels | Variant (best security levels) | Type | | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) | pk size (bytes) | ct size (bytes) | ss size (bytes) |")
     print("| --- | --- | --- | --- | --- | --- | --- |  --- | --- |")
     for scheme in KEM:
         for variant in scheme["variants"]:
