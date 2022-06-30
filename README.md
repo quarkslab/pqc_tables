@@ -79,7 +79,7 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 
 ### Post-quantum cryptography key exchange mechanisms and their usage for (French) certification
 
-| KEM                | Security Levels        | Variant (best security levels)          | Type                 | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] |  sk size (bytes)   | pk size (bytes)               | ct size (bytes)    | ss size (bytes) |
+| KEM                | Security Levels        | Variant (best security levels)          | Type                 | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes)    | pk size (bytes)               | ct size (bytes)    | ss size (bytes) |
 | ---                | ---                    | ---                                     | ---                  | ---                  | ---                     | ---                | ---                           | ---                | ---             |
 | Classic McEliece   | I, III, V              | 6960119(f)                              | Code                 | Finalist             | Hybrid        [[7](#7)] | 13,948             |         1,047,319             |    226             | 32              |
 | Classic McEliece   | I, III, V              | 8192128(f)                              | Code                 | Finalist             | Hybrid        [[7](#7)] | 14,120             |         1,357,824             |    240             | 32              |
