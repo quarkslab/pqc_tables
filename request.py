@@ -30,7 +30,7 @@ def format_notes(t, key):
         return ""
     s = " [[{0}](#{0})".format(t[k][0]["note"])
     for i in range(1, len(t[k])):
-        s = s + ", [[{0}](#{0})".format(t[k][i]["note"])
+        s = s + ", [{0}](#{0})".format(t[k][i]["note"])
     s = s + "]"
     return s
 
@@ -84,8 +84,8 @@ def complete_tables(data):
         elif scheme["scheme"] == "Signature":
             signature.append(scheme)
 
-    print("| KEM | Security Levels | Variant (best security levels) | Type | | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) | pk size (bytes) | ct size (bytes) | ss size (bytes) |")
-    print("| --- | --- | --- | --- | --- | --- | --- |  --- | --- |")
+    print("| KEM | Security Levels | Variant (best security levels) | Type | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) | pk size (bytes) | ct size (bytes) | ss size (bytes) |")
+    print("| --- | --- | --- | --- | --- | --- | --- |  --- | --- | --- |")
     for scheme in KEM:
         for variant in scheme["variants"]:
             format_variant_level(variant)
@@ -101,6 +101,8 @@ def complete_tables(data):
                     format_doc_code_data(variant, "ct"),
                     format_doc_code_data(variant, "ss"))
             print(s)
+
+    print("")
 
     print("| Signature | Security Levels | Variants (best security levels) | Type | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) |  pk size (bytes) | sig size (bytes) |")
     print("| --- | --- | --- | --- | --- | --- | --- |  --- | --- |")
