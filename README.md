@@ -32,7 +32,7 @@ Even if these tables are focused on the French context, they may be used in othe
 
 | KEM                 | Variants (best security level)               | NIST [[NIST](#NIST)] | ANSSI   [[ANSSI](#ANSSI)] |
 | ---                 | ---                                          | ---                  | ---                       |
-| Classic McEliece    | 6960119(f), 8192128(f)                       | Finalist             | Hybrid          [[7](#7)] |
+| Classic McEliece    | 6688128(f), 6960119(f), 8192128(f)           | Finalist             | Hybrid          [[7](#7)] |
 | CRYSTALS-KYBER      | 1024                                         | Finalist [[13](#13)] | Hybrid                    |
 | NTRU                | HPS-4096-821                                 | Finalist             | Maybe hybrid    [[1](#1)] |
 | NTRU                | HPS-4096-1229, HRSS-1373                     | Finalist             | Hybrid                    |
@@ -81,6 +81,7 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 
 | KEM                | Security Levels        | Variant (best security levels)          | Type                 | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes)    | pk size (bytes)               | ct size (bytes)    | ss size (bytes) |
 | ---                | ---                    | ---                                     | ---                  | ---                  | ---                     | ---                | ---                           | ---                | ---             |
+| Classic McEliece   | I, III, V              | 6688128(f)                              | Code                 | Finalist             | Hybrid        [[7](#7)] | 13,932             |         1,044,992             |    240             | 32              |
 | Classic McEliece   | I, III, V              | 6960119(f)                              | Code                 | Finalist             | Hybrid        [[7](#7)] | 13,948             |         1,047,319             |    226             | 32              |
 | Classic McEliece   | I, III, V              | 8192128(f)                              | Code                 | Finalist             | Hybrid        [[7](#7)] | 14,120             |         1,357,824             |    240             | 32              |
 | CRYSTALS-KYBER     | I, III, V              | 1024                                    | Lattice (structured) | Finalist             | Hybrid      [[13](#13)] |  3,168             |             1,568             |  1,568             | 32              |

@@ -11,6 +11,20 @@
 		"NIST": "finalist",
 		"variants": [
 			{
+				"variant": "6688128(f)",
+				"levels": [
+					{"level": "5"}
+				],
+				"ANSSI": "hybrid",
+				"notesANSSI": [
+					{"note": "7"}
+				],
+				"sk": "13932",
+				"pk": "1044992",
+				"ct": "240",
+				"ss": "32"
+			},
+			{
 				"variant": "6960119(f)",
 				"levels": [
 					{"level": "5"}
