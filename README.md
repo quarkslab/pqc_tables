@@ -225,3 +225,5 @@ We then will consider in the table only the SHA-256 and SHAKE256 variants, other
 <a name="19">[19]</a> By assuming that `o1 = 36`, `o2 = 64` and `v1 = 148` which is coherent with the parameters in [[6](#6)], the formula in page 17 of the documentation gives the equation  `o1 * o2 + v1 * (o1 + o2) + o1 * o2 + o1 * (v1 * (v1 + 1) / 2 + v1 * o1) + o2 * ((v1 + o1) * (v1 + o1 + 1) / 2 + (v1 + o1) * o2)`
 
 <a name="20">[20]</a> By modifying the code as proposed in [`script_test.sh`](script_test.sh), we obtain the following values
+
+<a name="21">[21]</a> See Table 3 in [[KF](#KF)], for `2^20` messages for LMS and XMSS and `2^60` for HSS and XMSS-MT

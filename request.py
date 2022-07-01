@@ -37,11 +37,14 @@ def format_notes(t, key):
 # key can be: sk, pk, sig, ct, ss
 def format_doc_code_data(variant, key):
     keycode = key + "code"
+    keypossible = key + "possible"
     if key in variant and keycode in variant :
         return format_number(variant[key]) + format_notes(variant, key) + " / " + format_number(variant[keycode]) + format_notes(variant, keycode)
     elif key in variant:
+        if keypossible in variant:
+            return format_number(variant[key]) + format_notes(variant, key) + " (ex: " + format_number(variant[keypossible]) + format_notes(variant, keypossible) + ")"
         return format_number(variant[key]) + format_notes(variant, key)
-    else:
+    elif keycode in variant:
         return format_number(variant[keycode]) + format_notes(variant, keycode)
 
 def format_level(scheme):
@@ -58,67 +61,100 @@ def format_variant_level(variant):
     else:
         return " (level " + " / ".join([roman_number(i["level"]) for i in variant["levels"]]) + ")"
 
-# def simple_tables(data):
-    # names = [scheme["name"] for scheme in data]
-    # lname = max([len(i) for i in names])
-    # format_name = "{0: <" + str(lname) + "}"
-    # variants = []
-    # for scheme in data:
-        # var = []
-        # for variant in scheme["variants"]:
-            # if variant["levels"][-1]["level"] == "5":
-                # var.append(variant["variant"])
-        # variants.append(", ".join(var))
-    # lvariants = max([len(i) for i in variants])
-    # format_variants = "{0: <" + str(lvariants) + "}"
+def format_type(scheme):
+    if "ZKP" in scheme["type"]:
+        return scheme["type"]
+    return scheme["type"].capitalize()
 
-    # for i in range(len(names)):
-        # print("| " + format_name.format(names[i]) + " | " + format_variants.format(variants[i]) + " |")
+def process_scheme(scheme, type_scheme):
+    for variant in scheme["variants"]:
+        D = {}
+        for key in scheme:
+            if key != "variants":
+                D[key] = scheme[key]
+        D["variantdetails"] = variant
+        type_scheme.append(D)
+
+def sorted_KEM_bandwidth(scheme):
+    variant = scheme["variantdetails"]
+    pk = 0
+    pkcode = 0
+    ct = 0
+    ctcode = 0
+    if "pk" in variant:
+        pk = int(variant["pk"])
+    if "pkcode" in variant:
+        pkcode = int(variant["pkcode"])
+    if "ct" in variant:
+        ct = int(variant["ct"])
+    if "ctcode" in variant:
+        ctcode = int(variant["ctcode"])
+    return max(pk, pkcode) + max(ct, ctcode)
+
+def sorted_signature_bandwidth(scheme):
+    variant = scheme["variantdetails"]
+    pk = 0
+    pkcode = 0
+    sig = 0
+    sigcode = 0
+    if "pk" in variant:
+        pk = int(variant["pk"])
+    if "pkcode" in variant:
+        pkcode = int(variant["pkcode"])
+    if "sig" in variant:
+        if variant["sig"].isdigit():
+            sig = int(variant["sig"])
+        else:
+            sig = int(variant["sigpossible"])
+    if "sigcode" in variant:
+        sigcode = int(variant["sigcode"])
+    return max(pk, pkcode) + max(sig, sigcode)
 
 def complete_tables(data):
     KEM = []
     signature = []
     for scheme in data:
         if scheme["scheme"] == "KEM":
-            KEM.append(scheme)
+            process_scheme(scheme, KEM)
         elif scheme["scheme"] == "Signature":
-            signature.append(scheme)
+            process_scheme(scheme, signature)
+
+    KEM = sorted(KEM, key=sorted_KEM_bandwidth)
+    signature = sorted(signature, key=sorted_signature_bandwidth)
 
     print("| KEM | Security Levels | Variant (best security levels) | Type | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) | pk size (bytes) | ct size (bytes) | ss size (bytes) |")
     print("| --- | --- | --- | --- | --- | --- | --- |  --- | --- | --- |")
     for scheme in KEM:
-        for variant in scheme["variants"]:
-            format_variant_level(variant)
-            s = "| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} | {9} |".format(
-                    scheme["name"],
-                    format_level(scheme),
-                    variant["variant"] + format_variant_level(variant) + format_notes(variant, "variant"),
-                    scheme["type"].capitalize(),
-                    scheme["NIST"].capitalize(),
-                    variant["ANSSI"].capitalize() + format_notes(variant, "ANSSI"),
-                    format_doc_code_data(variant, "sk"),
-                    format_doc_code_data(variant, "pk"),
-                    format_doc_code_data(variant, "ct"),
-                    format_doc_code_data(variant, "ss"))
-            print(s)
+        variant = scheme["variantdetails"]
+        s = "| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} | {9} |".format(
+                scheme["name"],
+                format_level(scheme),
+                variant["variant"] + format_variant_level(variant) + format_notes(variant, "variant"),
+                scheme["type"].capitalize(),
+                scheme["NIST"].capitalize(),
+                variant["ANSSI"].capitalize() + format_notes(variant, "ANSSI"),
+                format_doc_code_data(variant, "sk"),
+                format_doc_code_data(variant, "pk"),
+                format_doc_code_data(variant, "ct"),
+                format_doc_code_data(variant, "ss"))
+        print(s)
 
     print("")
-
     print("| Signature | Security Levels | Variants (best security levels) | Type | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) |  pk size (bytes) | sig size (bytes) |")
     print("| --- | --- | --- | --- | --- | --- | --- |  --- | --- |")
     for scheme in signature:
-        for variant in scheme["variants"]:
-            s = "| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |".format(
-                    scheme["name"],
-                    format_level(scheme) + format_notes(scheme, "levels"),
-                    variant["variant"] + format_variant_level(variant),
-                    scheme["type"].capitalize(),
-                    scheme["NIST"].capitalize() + format_notes(scheme, "NIST"),
-                    variant["ANSSI"].capitalize() + format_notes(variant, "ANSSI"),
-                    format_doc_code_data(variant, "sk"),
-                    format_doc_code_data(variant, "pk"),
-                    format_doc_code_data(variant, "sig"))
-            print(s)
+        variant = scheme["variantdetails"]
+        s = "| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |".format(
+                scheme["name"],
+                format_level(scheme) + format_notes(scheme, "levels"),
+                variant["variant"] + format_variant_level(variant),
+                format_type(scheme),
+                scheme["NIST"].capitalize() + format_notes(scheme, "NIST"),
+                variant["ANSSI"].capitalize() + format_notes(variant, "ANSSI"),
+                format_doc_code_data(variant, "sk"),
+                format_doc_code_data(variant, "pk"),
+                format_doc_code_data(variant, "sig"))
+        print(s)
 
 filer = open("db.json")
 

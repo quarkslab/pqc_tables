@@ -462,7 +462,11 @@
 				],
 				"sk": "dependent",
 				"pk": "56",
-				"sig": "dependent"
+				"sig": "dependent",
+				"sigpossible": "2828",
+				"notessigpossible": [
+					{"note": "21"}
+				]
 			}
 		]
 	},
@@ -492,7 +496,11 @@
 				],
 				"sk": "dependent",
 				"pk": "60",
-				"sig": "dependent"
+				"sig": "dependent",
+				"sigpossible": "15533",
+				"notessigpossible": [
+					{"note": "21"}
+				]
 			}
 		]
 	},
@@ -523,7 +531,11 @@
 				],
 				"sk": "dependent",
 				"pk": "68",
-				"sig": "dependent"
+				"sig": "dependent",
+				"sigpossible": "5716",
+				"notessigpossible": [
+					{"note": "21"}
+				]
 			},
 			{
 				"variant": "`XMSS-SHAKE_.._512`",
@@ -536,7 +548,11 @@
 				],
 				"sk": "dependent",
 				"pk": "132",
-				"sig": "dependent"
+				"sig": "dependent",
+				"sigpossible": "5716",
+				"notessigpossible": [
+					{"note": "21"}
+				]
 			}
 		]
 	},
@@ -567,7 +583,11 @@
 				],
 				"sk": "dependent",
 				"pk": "68",
-				"sig": "dependent"
+				"sig": "dependent",
+				"sigpossible": "14824",
+				"notessigpossible": [
+					{"note": "21"}
+				]
 			},
 			{
 				"variant": "`XMSSMT-SHAKE_../.._512`",
@@ -580,7 +600,11 @@
 				],
 				"sk": "dependent",
 				"pk": "132",
-				"sig": "dependent"
+				"sig": "dependent",
+				"sigpossible": "14824",
+				"notessigpossible": [
+					{"note": "21"}
+				]
 			}
 		]
 	},
@@ -830,7 +854,7 @@
 				"skcode": "97",
 				"pk": "64",
 				"pkcode": "65",
-				"sig": "126,286"
+				"sig": "126286"
 			},
 			{
 				"variant": "3-L5",
