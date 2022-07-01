@@ -63,21 +63,30 @@ sed -i "s/RANDOMBYTES_INIT/randombytes_init(entropy_input, NULL, 256);/" $PATH_c
 cd $PATH_code
 
 echo Classic
+cp Vc_Classic/rainbow_config.h Vc_Classic/rainbow_config.h.bak
 sed -i "s/#define _V1 96/#define _V1 148/" Vc_Classic/rainbow_config.h
 make PROJ_DIR=Vc_Classic > /dev/null 2>&1
 ./PQCgenKAT_sign $M
 make clean > /dev/null 2>&1
+cp Vc_Classic/rainbow_config.h.bak Vc_Classic/rainbow_config.h
+rm Vc_Classic/rainbow_config.h.bak
 
 echo Circumzenithal
+cp Vc_Circumzenithal/rainbow_config.h Vc_Circumzenithal/rainbow_config.h.bak
 sed -i "s/#define _V1 96/#define _V1 148/" Vc_Circumzenithal/rainbow_config.h
 make PROJ_DIR=Vc_Circumzenithal > /dev/null 2>&1
 ./PQCgenKAT_sign $M
 make clean > /dev/null 2>&1
+cp Vc_Circumzenithal/rainbow_config.h.bak Vc_Circumzenithal/rainbow_config.h
+rm Vc_Circumzenithal/rainbow_config.h.bak
 
 echo Compressed
+cp Vc_Compressed/rainbow_config.h Vc_Compressed/rainbow_config.h.bak 
 sed -i "s/#define _V1 96/#define _V1 148/" Vc_Compressed/rainbow_config.h
 make PROJ_DIR=Vc_Compressed > /dev/null 2>&1
 ./PQCgenKAT_sign $M
+cp Vc_Compressed/rainbow_config.h.bak Vc_Compressed/rainbow_config.h
+rm Vc_Compressed/rainbow_config.h.bak
 
 cd $PWD_entry
 cp $PATH_code/PQCgenKAT_sign.c.bak $PATH_code/PQCgenKAT_sign.c
