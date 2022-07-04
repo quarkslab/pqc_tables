@@ -20,7 +20,7 @@ About the hybrid mechanism, it can be:
 * *cascade KDF* for key exchange mechanisms, see Section 8.3 of [[ETSI](#ETSI)];
 * *concatenate* for signatures.
 
-### Notes
+### Notes (simplified tables)
 
 We give in notes some additional content, either to justify our results or to give more information and some recommendations, coming from the ANSSI views or from other governments’ positions. Indeed, as mentioned in [ANSSI](#ANSSI),
 
@@ -28,32 +28,32 @@ We give in notes some additional content, either to justify our results or to gi
 
 Even if these tables are focused on the French context, they may be used in other national contexts too.
 
-### Post-quantum cryptography key exchange mechanisms and their usage for (French) certifications
+### Post-quantum cryptography key exchange mechanisms and their usage for (French) certifications (simplified tables)
 
-| KEM                 | Variants (best security level)               | NIST                            | ANSSI   [[ANSSI](#ANSSI)] |
-| ---                 | ---                                          | ---                             | ---                       |
-| Classic McEliece    | 6688128(f), 6960119(f), 8192128(f)           | Finalist (round 3)  [[22](#22)] | Hybrid          [[7](#7)] |
-| CRYSTALS-KYBER      | 1024                                         | Finalist (round 3)  [[22](#22)] | Hybrid        [[13](#13)] |
-| NTRU                | HPS-4096-821                                 | Finalist (round 3)  [[22](#22)] | Maybe hybrid    [[1](#1)] |
-| NTRU                | HPS-4096-1229, HRSS-1373           [[2](#2)] | Finalist (round 3)  [[22](#22)] | Hybrid                    |
-| SABER               | (u)FireSaber                                 | Finalist (round 3)  [[22](#22)] | Hybrid                    |
-| BIKE                | Level 5                                      | Alternate (round 3) [[22](#22)] | Hybrid                    |
-| FrodoKEM            | 1344                                         | Alternate (round 3) [[22](#22)] | Hybrid          [[8](#8)] |
-| HQC                 | 256                                          | Alternate (round 3) [[22](#22)] | Hybrid                    |
-| NTRU Prime          | sntrup1277, ntrulpr1277                      | Alternate (round 3) [[22](#22)] | Hybrid                    |
-| SIKE                | p751                                         | Alternate (round 3) [[22](#22)] | Hybrid                    |
+| KEM                                                         | Variants (best security level)               | NIST                            | ANSSI   [[ANSSI](#ANSSI)] |
+| ---                                                         | ---                                          | ---                             | ---                       |
+| [Classic McEliece](https://classic.mceliece.org/)           | 6688128(f), 6960119(f), 8192128(f)           | Finalist (round 3)  [[22](#22)] | Hybrid          [[7](#7)] |
+| [CRYSTALS-KYBER](https://pq-crystals.org/kyber/index.shtml) | 1024                                         | Finalist (round 3)  [[22](#22)] | Hybrid        [[13](#13)] |
+| [NTRU](https://ntru.org/)                                   | HPS-4096-821                                 | Finalist (round 3)  [[22](#22)] | Maybe hybrid    [[1](#1)] |
+| [NTRU](https://ntru.org/)                                   | HPS-4096-1229, HRSS-1373           [[2](#2)] | Finalist (round 3)  [[22](#22)] | Hybrid                    |
+| [SABER](https://www.esat.kuleuven.be/cosic/pqcrypto/saber/) | (u)FireSaber                                 | Finalist (round 3)  [[22](#22)] | Hybrid                    |
+| [BIKE](https://bikesuite.org/)                              | Level 5                                      | Alternate (round 3) [[22](#22)] | Hybrid                    |
+| [FrodoKEM](http://frodokem.org/)                            | 1344                                         | Alternate (round 3) [[22](#22)] | Hybrid          [[8](#8)] |
+| [HQC](http://pqc-hqc.org/)                                  | 256                                          | Alternate (round 3) [[22](#22)] | Hybrid                    |
+| [NTRU Prime](https://ntruprime.cr.yp.to/)                   | sntrup1277, ntrulpr1277                      | Alternate (round 3) [[22](#22)] | Hybrid                    |
+| [SIKE](http://sike.org/)                                    | p751                                         | Alternate (round 3) [[22](#22)] | Hybrid                    |
 
-### Post-quantum cryptography signatures and their usage for (French) certifications
+### Post-quantum cryptography signatures and their usage for (French) certifications (simplified tables)
 
-| Signature           | Variants (best security level)               | NIST                            | ANSSI   [[ANSSI](#ANSSI)] |
-| ---                 | ---                                          | ---                             | ---                       |
-| Stateful hash-based | LMS, XMSS, HSS, XMSS-MT                      | Standard            [[10](#10)] | Compliant       [[9](#9)] |
-| CRYSTALS-DILITHIUM  | 5                                            | Finalist (round 3)  [[22](#22)] | Hybrid        [[13](#13)] |
-| FALCON              | 1024                                         | Finalist (round 3)  [[22](#22)] | Hybrid        [[13](#13)] |
-| Rainbow             | UOV parameters SL5                 [[6](#6)] | Finalist (round 3)  [[22](#22)] | Compliant                 |
-| GeMSS               | 256, all variants                            | Alternate (round 3) [[22](#22)] | Not compliant [[15](#15)] |
-| Picnic              | L5-FS, L5-UR, L5-full, 3-L5                  | Alternate (round 3) [[22](#22)] | Hybrid                    |
-| SPHINCS+            | SHAKE-256s, SHA2-256s, SHAKE-256f, SHA2-256s | Alternate (round 3) [[22](#22)] | Compliant       [[9](#9)] |
+| Signature                                                           | Variants (best security level)                | NIST                            | ANSSI   [[ANSSI](#ANSSI)] |
+| ---                                                                 | ---                                           | ---                             | ---                       |
+| Stateful hash-based                                                 | [LMS, HSS](https://datatracker.ietf.org/doc/html/rfc8554), [XMSS, XMSS-MT](https://datatracker.ietf.org/doc/html/rfc8391) | Standard            [[10](#10)] | Compliant       [[9](#9)] |
+| [CRYSTALS-DILITHIUM](https://pq-crystals.org/dilithium/index.shtml) | 5                                             | Finalist (round 3)  [[22](#22)] | Hybrid        [[13](#13)] |
+| [FALCON](https://falcon-sign.info/)                                 | 1024                                          | Finalist (round 3)  [[22](#22)] | Hybrid        [[13](#13)] |
+| [Rainbow](https://www.pqcrainbow.org/)                              | UOV parameters SL5                 [[6](#6)]  | Finalist (round 3)  [[22](#22)] | Compliant                 |
+| [GeMSS](https://www-polsys.lip6.fr/Links/NIST/GeMSS.html)           | 256, all variants                             | Alternate (round 3) [[22](#22)] | Not compliant [[15](#15)] |
+| [Picnic](https://microsoft.github.io/Picnic/)                       | L5-FS, L5-UR, L5-full, 3-L5                   | Alternate (round 3) [[22](#22)] | Hybrid                    |
+| [SPHINCS+](https://sphincs.org/)                                    | SHAKE-256s, SHA2-256s, SHAKE-256f, SHA2-256s  | Alternate (round 3) [[22](#22)] | Compliant       [[9](#9)] |
 
 ## Tables
 
@@ -123,17 +123,23 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 
 <a name="6">[6]</a> After the attack in [[Beu](#Beu)] acknowledged in [ROUND 3 OFFICIAL COMMENT: Rainbow](https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/KFgw5_qCXiI/m/cr66AGOfAgAJ), the authors proposed a new set of parameters [UOV parameters](https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/B1RFy31rH8I/m/yIqAt7dABAAJ)
 
-<a name="7">[7]</a> From [[BSI](#BSI)] and [[NLNCSA](#NLNCSA)]
+<a name="7">[7]</a> From [[BSI](#BSI)]
 
 > The mechanisms FrodoKEM-976, FrodoKEM-1344 as well as **Classic McEliece** with the parameters in **Categories 3 and 5** are assessed to be cryptographically suitable to protect confidential.
 
+From [[NLNCSA](#NLNCSA)]
+
 > For PQC, we recommend the most secure algorithms, such as Frodo or **McEliece**.
 
-<a name="8">[8]</a> From [[ANSSI](#ANSSI)], [[BSI](#BSI)] and [[NLNCSA](#NLNCSA)]
+<a name="8">[8]</a> From [[ANSSI](#ANSSI)]
 
 > For example, a developer should be able to obtain a security visa for a product implementing FrodoKEM whether NIST decides that FrodoKEM will be one of the first PQC standards or not.
 
+From [[BSI](#BSI)]
+
 > The mechanisms FrodoKEM-976, **FrodoKEM-1344** as well as Classic McEliece with the parameters in Categories 3 and 5 are assessed to be cryptographically suitable to protect confidential.
+
+From [[NLNCSA](#NLNCSA)]
 
 > For PQC, we recommend the most secure algorithms, such as **Frodo** or McEliece.
 
@@ -153,7 +159,7 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 
 <a name="14">[14]</a> Depending on the analysis of the security level (bulletproofing strategies), the security level is:
 
-* IV (strategy #1) and may be used in a hybrid way or 
+* IV (strategy #1) and may be used in a hybrid way or
 * III (strategy #2) and is not compliant
 
 <a name="15">[15]</a> The attacks in [[TPD](#TPD), [BBCPSTV](#BBCPSTV)] show that the security of GeMSS256, BlueGeMSS256 and RedGeMSS256 are less than level I
@@ -165,6 +171,8 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 <a name="17">[17]</a> From [[RFC8391](#RFC8391)], see [Errata ID: 6024](https://www.rfc-editor.org/errata/eid6024)
 
 > Parameters with SHA2 and n = 32 [...] and with SHA2 and n = 64 [...] yield post-quantum security of 128 and 256 bits, respectively. Parameters with SHAKE and n = 32 [...] [and] with SHAKE and n = 64 [...] yield post-quantum security of 86 and 170 bits, respectively.
+
+and
 
 > In consequence, SHAKE-128 cannot provide more security than NIST post-quantum security level II.
 

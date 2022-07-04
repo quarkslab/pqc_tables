@@ -2,6 +2,7 @@
 	{
 		"scheme": "KEM",
 		"name": "Classic McEliece",
+		"website": "https://classic.mceliece.org/",
 		"levels": [
 			{"level": "1"},
 			{"level": "3"},
@@ -60,6 +61,7 @@
 	{
 		"scheme": "KEM",
 		"name": "CRYSTALS-KYBER",
+		"website": "https://pq-crystals.org/kyber/index.shtml",
 		"levels": [
 			{"level": "1"},
 			{"level": "3"},
@@ -90,6 +92,7 @@
 	{
 		"scheme": "KEM",
 		"name": "NTRU",
+		"website": "https://ntru.org/",
 		"levels": [
 			{"level": "1"},
 			{"level": "3"},
@@ -179,6 +182,7 @@
 	{
 		"scheme": "KEM",
 		"name": "SABER",
+		"website": "https://www.esat.kuleuven.be/cosic/pqcrypto/saber/",
 		"levels": [
 			{"level": "1"},
 			{"level": "3"},
@@ -263,6 +267,7 @@
 	{
 		"scheme": "KEM",
 		"name": "BIKE",
+		"website": "http://bikesuite.org/",
 		"levels": [
 			{"level": "1"},
 			{"level": "3"},
@@ -291,6 +296,7 @@
 	{
 		"scheme": "KEM",
 		"name": "FrodoKEM",
+		"website": "http://frodokem.org/",
 		"levels": [
 			{"level": "1"},
 			{"level": "3"},
@@ -321,6 +327,7 @@
 	{
 		"scheme": "KEM",
 		"name": "HQC",
+		"website": "http://pqc-hqc.org/",
 		"levels": [
 			{"level": "1"},
 			{"level": "3"},
@@ -348,6 +355,7 @@
 	{
 		"scheme": "KEM",
 		"name": "NTRU Prime",
+		"website": "https://ntruprime.cr.yp.to/",
 		"levels": [
 			{"level": "1"},
 			{"level": "2"},
@@ -441,6 +449,7 @@
 	{
 		"scheme": "KEM",
 		"name": "SIKE",
+		"website": "http://sike.org/",
 		"levels": [
 			{"level": "1"},
 			{"level": "2"},
@@ -480,6 +489,7 @@
 	{
 		"scheme": "Signature",
 		"name": "LMS",
+		"website": "https://datatracker.ietf.org/doc/html/rfc8554",
 		"levels": [
 			{"level": "5"}
 		],
@@ -514,6 +524,7 @@
 	{
 		"scheme": "Signature",
 		"name": "HSS",
+		"website": "https://datatracker.ietf.org/doc/html/rfc8554",
 		"levels": [
 			{"level": "5"}
 		],
@@ -548,6 +559,7 @@
 	{
 		"scheme": "Signature",
 		"name": "XMSS",
+		"website": "https://datatracker.ietf.org/doc/html/rfc8391",
 		"levels": [
 			{"level": "2"},
 			{"level": "5"}
@@ -600,6 +612,7 @@
 	{
 		"scheme": "Signature",
 		"name": "XMSS-MT",
+		"website": "https://datatracker.ietf.org/doc/html/rfc8391",
 		"levels": [
 			{"level": "2"},
 			{"level": "5"}
@@ -652,6 +665,7 @@
 	{
 		"scheme": "Signature",
 		"name": "CRYSTALS-DILITHIUM",
+		"website": "https://pq-crystals.org/dilithium/index.shtml",
 		"levels": [
 			{"level": "2"},
 			{"level": "3"},
@@ -683,7 +697,8 @@
 	},
 	{
 		"scheme": "Signature",
-		"name": "Falcon",
+		"name": "FALCON",
+		"website": "https://falcon-sign.info/",
 		"levels": [
 			{"level": "1"},
 			{"level": "5"}
@@ -716,6 +731,7 @@
 	{
 		"scheme": "Signature",
 		"name": "Rainbow",
+		"website": "https://www.pqcrainbow.org/",
 		"noteslevels": [
 			{"note": "6"}
 		],
@@ -785,6 +801,7 @@
 	{
 		"scheme": "Signature",
 		"name": "GeMSS",
+		"website": "https://www-polsys.lip6.fr/Links/NIST/GeMSS.html",
 		"levels": [
 			{"level": "< 1"}
 		],
@@ -863,6 +880,7 @@
 	{
 		"scheme": "Signature",
 		"name": "Picnic",
+		"website": "https://microsoft.github.io/Picnic/",
 		"levels": [
 			{"level": "1"},
 			{"level": "3"},
@@ -930,6 +948,7 @@
 	{
 		"scheme": "Signature",
 		"name": "SPHINCS+",
+		"website": "https://sphincs.org/",
 		"levels": [
 			{"level": "1"},
 			{"level": "2"},
