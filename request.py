@@ -110,6 +110,14 @@ def sorted_signature_bandwidth(scheme):
         sigcode = int(variant["sigcode"])
     return max(pk, pkcode) + max(sig, sigcode)
 
+def sorted_NIST_status(scheme):
+    if "alternate" in scheme["NIST"]:
+        return 2
+    elif "finalist" in scheme["NIST"]:
+        return 1
+    elif "standard" in scheme["NIST"]:
+        return 0
+
 def complete_tables(data):
     KEM = []
     signature = []
@@ -119,10 +127,15 @@ def complete_tables(data):
         elif scheme["scheme"] == "Signature":
             process_scheme(scheme, signature)
 
-    KEM = sorted(KEM, key=sorted_KEM_bandwidth)
-    signature = sorted(signature, key=sorted_signature_bandwidth)
+    # KEM = sorted(KEM, key=sorted_KEM_bandwidth)
+    # signature = sorted(signature, key=sorted_signature_bandwidth)
+    KEM = sorted(KEM, key=sorted_NIST_status)
+    signature = sorted(signature, key=sorted_NIST_status)
 
-    print("| KEM | Security Levels | Variant (best security levels) | Type | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) | pk size (bytes) | ct size (bytes) | ss size (bytes) |")
+    print("")
+    print("### Post-quantum cryptography key exchange mechanisms and their usage for (French) certification")
+    print("")
+    print("| KEM | Security Levels | Variant (levels IV / V) | Type | NIST | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) | pk size (bytes) | ct size (bytes) | ss size (bytes) |")
     print("| --- | --- | --- | --- | --- | --- | --- |  --- | --- | --- |")
     for scheme in KEM:
         variant = scheme["variantdetails"]
@@ -131,7 +144,7 @@ def complete_tables(data):
                 format_level(scheme),
                 variant["variant"] + format_variant_level(variant) + format_notes(variant, "variant"),
                 scheme["type"].capitalize(),
-                scheme["NIST"].capitalize(),
+                scheme["NIST"].capitalize() + format_notes(scheme, "NIST"),
                 variant["ANSSI"].capitalize() + format_notes(variant, "ANSSI"),
                 format_doc_code_data(variant, "sk"),
                 format_doc_code_data(variant, "pk"),
@@ -140,7 +153,9 @@ def complete_tables(data):
         print(s)
 
     print("")
-    print("| Signature | Security Levels | Variants (best security levels) | Type | NIST [[NIST](#NIST)] | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) |  pk size (bytes) | sig size (bytes) |")
+    print("### Post-quantum cryptography signatures and their usage for (French) certification")
+    print("")
+    print("| Signature | Security Levels | Variants (levels IV / V) | Type | NIST | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) |  pk size (bytes) | sig size (bytes) |")
     print("| --- | --- | --- | --- | --- | --- | --- |  --- | --- |")
     for scheme in signature:
         variant = scheme["variantdetails"]

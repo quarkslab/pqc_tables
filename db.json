@@ -8,7 +8,10 @@
 			{"level": "5"}
 		],
 		"type": "code",
-		"NIST": "finalist",
+		"NIST": "finalist (round 3)",
+		"notesNIST": [
+			{"note": "22"}
+		],
 		"variants": [
 			{
 				"variant": "6688128(f)",
@@ -63,7 +66,10 @@
 			{"level": "5"}
 		],
 		"type": "lattice (structured)",
-		"NIST": "finalist",
+		"NIST": "finalist (round 3)",
+		"notesNIST": [
+			{"note": "22"}
+		],
 		"variants": [
 			{
 				"variant": "1024",
@@ -90,7 +96,10 @@
 			{"level": "5"}
 		],
 		"type": "lattice (structured)",
-		"NIST": "finalist",
+		"NIST": "finalist (round 3)",
+		"notesNIST": [
+			{"note": "22"}
+		],
 		"variants": [
 			{
 				"variant": "HPS-4096-821",
@@ -120,20 +129,20 @@
 					{"level": "5"}
 				],
 				"ANSSI": "hybrid",
-				"sk": "2366",
-				"notessk": [
+				"skcode": "2366",
+				"notesskcode": [
 					{"note": "5"}
 				],
-				"pk": "1842",
-				"notespk": [
+				"pkcode": "1842",
+				"notespkcode": [
 					{"note": "5"}
 				],
-				"ct": "1842",
-				"notesct": [
+				"ctcode": "1842",
+				"notesctcode": [
 					{"note": "5"}
 				],
-				"ss": "32",
-				"notesss": [
+				"sscode": "32",
+				"notessscode": [
 					{"note": "5"}
 				]
 			},
@@ -147,20 +156,20 @@
 					{"level": "5"}
 				],
 				"ANSSI": "hybrid",
-				"sk": "2938",
-				"notessk": [
+				"skcode": "2938",
+				"notesskcode": [
 					{"note": "5"}
 				],
-				"pk": "2401",
-				"notespk": [
+				"pkcode": "2401",
+				"notespkcode": [
 					{"note": "5"}
 				],
-				"ct": "2401",
-				"notesct": [
+				"ctcode": "2401",
+				"notesctcode": [
 					{"note": "5"}
 				],
-				"ss": "32",
-				"notesss": [
+				"sscode": "32",
+				"notessscode": [
 					{"note": "5"}
 				]
 			}
@@ -176,7 +185,10 @@
 			{"level": "5"}
 		],
 		"type": "lattice (structured)",
-		"NIST": "finalist",
+		"NIST": "finalist (round 3)",
+		"notesNIST": [
+			{"note": "22"}
+		],
 		"variants": [
 			{
 				"variant": "FireSaber",
@@ -257,7 +269,10 @@
 			{"level": "5"}
 		],
 		"type": "code",
-		"NIST": "alternate",
+		"NIST": "alternate (round 3)",
+		"notesNIST": [
+			{"note": "22"}
+		],
 		"variants": [
 			{
 				"variant": "Level 5",
@@ -282,7 +297,10 @@
 			{"level": "5"}
 		],
 		"type": "lattice",
-		"NIST": "alternate",
+		"NIST": "alternate (round 3)",
+		"notesNIST": [
+			{"note": "22"}
+		],
 		"variants": [
 			{
 				"variant": "1344",
@@ -309,7 +327,10 @@
 			{"level": "5"}
 		],
 		"type": "code",
-		"NIST": "alternate",
+		"NIST": "alternate (round 3)",
+		"notesNIST": [
+			{"note": "22"}
+		],
 		"variants": [
 			{
 				"variant": "256",
@@ -335,18 +356,21 @@
 			{"level": "5"}
 		],
 		"type": "lattice (structured)",
-		"NIST": "alternate",
+		"NIST": "alternate (round 3)",
+		"notesNIST": [
+			{"note": "22"}
+		],
 		"variants": [
 			{
 				"variant": "sntrup953",
-				"notesvariant": [
-					{"note": "14"}
-				],
 				"levels": [
 					{"level": "3"},
 					{"level": "4"}
 				],
 				"ANSSI": "maybe hybrid",
+				"notesANSSI": [
+					{"note": "14"}
+				],
 				"sk": "2254",
 				"pk": "1505",
 				"ct": "1349",
@@ -354,14 +378,14 @@
 			},
 			{
 				"variant": "ntrulpr953",
-				"notesvariant": [
-					{"note": "14"}
-				],
 				"levels": [
 					{"level": "3"},
 					{"level": "4"}
 				],
 				"ANSSI": "maybe hybrid",
+				"notesANSSI": [
+					{"note": "14"}
+				],
 				"sk": "1652",
 				"pk": "1349",
 				"ct": "1477",
@@ -424,7 +448,10 @@
 			{"level": "5"}
 		],
 		"type": "isogenies",
-		"NIST": "alternate",
+		"NIST": "alternate (round 3)",
+		"notesNIST": [
+			{"note": "22"}
+		],
 		"variants": [
 			{
 				"variant": "p751",
@@ -631,7 +658,10 @@
 			{"level": "5"}
 		],
 		"type": "lattice (structured)",
-		"NIST": "finalist",
+		"NIST": "finalist (round 3)",
+		"notesNIST": [
+			{"note": "22"}
+		],
 		"variants": [
 			{
 				"variant": "5",
@@ -642,8 +672,8 @@
 				"notesANSSI": [
 					{"note": "13"}
 				],
-				"sk": "4880",
-				"notessk": [
+				"skcode": "4880",
+				"notesskcode": [
 					{"note": "5"}
 				],
 				"pk": "2592",
@@ -659,7 +689,10 @@
 			{"level": "5"}
 		],
 		"type": "lattice (structured)",
-		"NIST": "finalist",
+		"NIST": "finalist (round 3)",
+		"notesNIST": [
+			{"note": "22"}
+		],
 		"variants": [
 			{
 				"variant": "1024",
@@ -670,8 +703,8 @@
 				"notesANSSI": [
 					{"note": "13"}
 				],
-				"sk": "2305",
-				"notessk": [
+				"skcode": "2305",
+				"notesskcode": [
 					{"note": "5"}
 				],
 				"pk": "1793",
@@ -692,10 +725,13 @@
 			{"level": "5"}
 		],
 		"type": "multivariate",
-		"NIST": "finalist",
+		"NIST": "finalist (round 3)",
+		"notesNIST": [
+			{"note": "22"}
+		],
 		"variants": [
 			{
-				"variant": "UOV parameters SL5-Standard",
+				"variant": "UOV parameters SL5 - Standard",
 				"levels": [
 					{"level": "5"}
 				],
@@ -722,7 +758,7 @@
 				]
 			},
 			{
-				"variant": "UOV parameters SL5-CZ",
+				"variant": "UOV parameters SL5 - CZ",
 				"levels": [
 					{"level": "5"}
 				],
@@ -739,8 +775,8 @@
 				"notespkcode": [
 					{"note": "20"}
 				],
-				"sig": "264",
-				"notessig": [
+				"sigcode": "264",
+				"notessigcode": [
 					{"note": "20"}
 				]
 			}
@@ -756,7 +792,10 @@
 			{"note": "15"}
 		],
 		"type": "multivariate",
-		"NIST": "alternate",
+		"NIST": "alternate (round 3)",
+		"notesNIST": [
+			{"note": "22"}
+		],
 		"variants": [
 			{
 				"variant": "GeMSS256",
@@ -830,7 +869,10 @@
 			{"level": "5"}
 		],
 		"type": "ZKP / symmetric",
-		"NIST": "alternate",
+		"NIST": "alternate (round 3)",
+		"notesNIST": [
+			{"note": "22"}
+		],
 		"variants": [
 			{
 				"variant": "L5-FS",
@@ -895,7 +937,10 @@
 			{"level": "5"}
 		],
 		"type": "hash (stateless)",
-		"NIST": "alternate",
+		"NIST": "alternate (round 3)",
+		"notesNIST": [
+			{"note": "22"}
+		],
 		"variants": [
 			{
 				"variant": "SHAKE-256s",
