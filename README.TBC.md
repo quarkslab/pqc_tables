@@ -59,7 +59,7 @@ Even if these tables are focused on the French context, they may be used in othe
 
 ### Notes
 
-When two values are in a same cell, first is the one from the documentation, the second from the reference implementation submitted to [Round 3 submission of NIST Post-Quantum Cryptography](https://csrc.nist.gov/Projects/post-quantum-cryptography/round-3-submissions).
+When two values are in a same cell, first is the one from the documentation, the second from the reference implementation submitted to [Round 3 submission of NIST Post-Quantum Cryptography](https://csrc.nist.gov/Projects/post-quantum-cryptography/post-quantum-cryptography-standardization/round-3-submissions).
 
 Other tables gathering data on PQC schemes can be found, for example at:
 
@@ -97,9 +97,9 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 
 <a name="KPCSA">[KPCSA]</a> P. Kampanakis, P. Panburana, M. Curcio, C. Shroff and M. M. Alam, [Post-Quantum LMS and SPHINCS+ Hash-Based Signatures for UEFI Secure Boot](https://eprint.iacr.org/2021/041.pdf)
 
-<a name="NIST2020">[NIST2020]</a> G. Alagic, J. Alperin-Sheriff, D. Apon, D. Cooper, Q. Dang, J. Kelsey, Y.-K. Liu, C. Miller, D. Moody, R. Peralta, R. Perlner, A. Robinson and D. Smith-Tone, [Status Report on the Second Round of the NIST Post-Quantum Cryptography Standardization Process](https://csrc.nist.gov/publications/detail/nistir/8309/final), NISTIR 8309, July 2020
+<a name="NIST2020">[NIST2020]</a> G. Alagic, J. Alperin-Sheriff, D. Apon, D. Cooper, Q. Dang, J. Kelsey, Y.-K. Liu, C. Miller, D. Moody, R. Peralta, R. Perlner, A. Robinson and D. Smith-Tone, [Status Report on the Second Round of the NIST Post-Quantum Cryptography Standardization Process](https://doi.org/10.6028/NIST.IR.8309), NISTIR 8309, July 2020
 
-<a name*"NIST2022">[NIST2022]</a> G. Alagic, D. Apon, D. Cooper, Q. Dang, T. Dang, J. Kelsey, J. Lichtinger, C. Miller, D. Moody, R. Peralta, R. Perlner, A. Robinson, D. Smith-Tone, [Status Report on the Third Round of the NIST Post-Quantum Cryptography Standardization Process](https://doi.org/10.6028/NIST.IR.8413), NIST IR 8413, July 2022. See also [Announcement: The End of the 3rd Round - the First PQC Algorithms to be Standardized](https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/G0DoD7lkGPk/m/f3Hl0sh3AgAJ) and [PQC Standardization Process: Announcing Four Candidates to be Standardized, plus Fourth Round Candidates](https://csrc.nist.gov/news/2022/pqc-candidates-to-be-standardized-and-round-4)
+<a name="NIST2022">[NIST2022]</a> G. Alagic, D. Apon, D. Cooper, Q. Dang, T. Dang, J. Kelsey, J. Lichtinger, C. Miller, D. Moody, R. Peralta, R. Perlner, A. Robinson, D. Smith-Tone, [Status Report on the Third Round of the NIST Post-Quantum Cryptography Standardization Process](https://doi.org/10.6028/NIST.IR.8413), NIST IR 8413, July 2022. See also [Announcement: The End of the 3rd Round - the First PQC Algorithms to be Standardized](https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/G0DoD7lkGPk/m/f3Hl0sh3AgAJ) and [PQC Standardization Process: Announcing Four Candidates to be Standardized, plus Fourth Round Candidates](https://csrc.nist.gov/news/2022/pqc-candidates-to-be-standardized-and-round-4)
 
 <a name="NISTSTD">[NISTSTD]</a> D. Cooper, D. Apon, Q. Dang, M. Davidson, M. Dworkin, and C. Miller, [Recommendation for Stateful Hash-Based Signature Schemes](https://doi.org/10.6028/NIST.SP.800-208), NIST Special Publication 800-208, October 2020
 
