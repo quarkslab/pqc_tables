@@ -117,8 +117,10 @@ def sorted_signature_bandwidth(scheme):
 
 def sorted_NIST_status(scheme):
     if "alternate" in scheme["NIST"]:
-        return 2
+        return 3
     elif "finalist" in scheme["NIST"]:
+        return 2
+    elif "round 4" in scheme["NIST"]:
         return 1
     elif "standard" in scheme["NIST"]:
         return 0

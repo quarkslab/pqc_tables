@@ -32,28 +32,28 @@ Even if these tables are focused on the French context, they may be used in othe
 
 | KEM                                                         | Variants (best security level)               | NIST                            | ANSSI   [[ANSSI](#ANSSI)] |
 | ---                                                         | ---                                          | ---                             | ---                       |
-| [Classic McEliece](https://classic.mceliece.org/)           | 6688128(f), 6960119(f), 8192128(f)           | Finalist (round 3)  [[22](#22)] | Hybrid          [[7](#7)] |
-| [CRYSTALS-KYBER](https://pq-crystals.org/kyber/index.shtml) | 1024                                         | Finalist (round 3)  [[22](#22)] | Hybrid        [[13](#13)] |
+| [CRYSTALS-KYBER](https://pq-crystals.org/kyber/index.shtml) | 1024                                         | Standard            [[23](#23)] | Hybrid        [[13](#13)] |
+| [BIKE](https://bikesuite.org/)                              | Level 5                                      | Round 4             [[23](#23)] | Hybrid                    |
+| [Classic McEliece](https://classic.mceliece.org/)           | 6688128(f), 6960119(f), 8192128(f)           | Round 4             [[23](#23)] | Hybrid          [[7](#7)] |
+| [HQC](http://pqc-hqc.org/)                                  | 256                                          | Round 4             [[23](#23)] | Hybrid                    |
+| [SIKE](http://sike.org/)                                    | p751                                         | Round 4             [[23](#23)] | Hybrid                    |
 | [NTRU](https://ntru.org/)                                   | HPS-4096-821                                 | Finalist (round 3)  [[22](#22)] | Maybe hybrid    [[1](#1)] |
 | [NTRU](https://ntru.org/)                                   | HPS-4096-1229, HRSS-1373           [[2](#2)] | Finalist (round 3)  [[22](#22)] | Hybrid                    |
 | [SABER](https://www.esat.kuleuven.be/cosic/pqcrypto/saber/) | (u)FireSaber                                 | Finalist (round 3)  [[22](#22)] | Hybrid                    |
-| [BIKE](https://bikesuite.org/)                              | Level 5                                      | Alternate (round 3) [[22](#22)] | Hybrid                    |
 | [FrodoKEM](http://frodokem.org/)                            | 1344                                         | Alternate (round 3) [[22](#22)] | Hybrid          [[8](#8)] |
-| [HQC](http://pqc-hqc.org/)                                  | 256                                          | Alternate (round 3) [[22](#22)] | Hybrid                    |
 | [NTRU Prime](https://ntruprime.cr.yp.to/)                   | sntrup1277, ntrulpr1277                      | Alternate (round 3) [[22](#22)] | Hybrid                    |
-| [SIKE](http://sike.org/)                                    | p751                                         | Alternate (round 3) [[22](#22)] | Hybrid                    |
 
 ### Post-quantum cryptography signatures and their usage for (French) certifications (simplified tables)
 
 | Signature                                                           | Variants (best security level)                | NIST                            | ANSSI   [[ANSSI](#ANSSI)] |
 | ---                                                                 | ---                                           | ---                             | ---                       |
+| [CRYSTALS-DILITHIUM](https://pq-crystals.org/dilithium/index.shtml) | 5                                             | Standard            [[23](#23)] | Hybrid        [[13](#13)] |
+| [FALCON](https://falcon-sign.info/)                                 | 1024                                          | Standard            [[23](#23)] | Hybrid        [[13](#13)] |
 | Stateful hash-based                                                 | [LMS, HSS](https://datatracker.ietf.org/doc/html/rfc8554), [XMSS, XMSS-MT](https://datatracker.ietf.org/doc/html/rfc8391) | Standard            [[10](#10)] | Compliant       [[9](#9)] |
-| [CRYSTALS-DILITHIUM](https://pq-crystals.org/dilithium/index.shtml) | 5                                             | Finalist (round 3)  [[22](#22)] | Hybrid        [[13](#13)] |
-| [FALCON](https://falcon-sign.info/)                                 | 1024                                          | Finalist (round 3)  [[22](#22)] | Hybrid        [[13](#13)] |
+| [SPHINCS+](https://sphincs.org/)                                    | SHAKE-256s, SHA2-256s, SHAKE-256f, SHA2-256s  | Standard            [[23](#23)] | Compliant       [[9](#9)] |
 | [Rainbow](https://www.pqcrainbow.org/)                              | UOV parameters SL5                 [[6](#6)]  | Finalist (round 3)  [[22](#22)] | Hybrid                    |
 | [GeMSS](https://www-polsys.lip6.fr/Links/NIST/GeMSS.html)           | 256, all variants                             | Alternate (round 3) [[22](#22)] | Not compliant [[15](#15)] |
 | [Picnic](https://microsoft.github.io/Picnic/)                       | L5-FS, L5-UR, L5-full, 3-L5                   | Alternate (round 3) [[22](#22)] | Hybrid                    |
-| [SPHINCS+](https://sphincs.org/)                                    | SHAKE-256s, SHA2-256s, SHAKE-256f, SHA2-256s  | Alternate (round 3) [[22](#22)] | Compliant       [[9](#9)] |
 
 ## Tables
 
@@ -98,6 +98,8 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 <a name="KPCSA">[KPCSA]</a> P. Kampanakis, P. Panburana, M. Curcio, C. Shroff and M. M. Alam, [Post-Quantum LMS and SPHINCS+ Hash-Based Signatures for UEFI Secure Boot](https://eprint.iacr.org/2021/041.pdf)
 
 <a name="NIST2020">[NIST2020]</a> G. Alagic, J. Alperin-Sheriff, D. Apon, D. Cooper, Q. Dang, J. Kelsey, Y.-K. Liu, C. Miller, D. Moody, R. Peralta, R. Perlner, A. Robinson and D. Smith-Tone, [Status Report on the Second Round of the NIST Post-Quantum Cryptography Standardization Process](https://csrc.nist.gov/publications/detail/nistir/8309/final), NISTIR 8309, July 2020
+
+<a name*"NIST2022">[NIST2022]</a> G. Alagic, D. Apon, D. Cooper, Q. Dang, T. Dang, J. Kelsey, J. Lichtinger, C. Miller, D. Moody, R. Peralta, R. Perlner, A. Robinson, D. Smith-Tone, [Status Report on the Third Round of the NIST Post-Quantum Cryptography Standardization Process](https://doi.org/10.6028/NIST.IR.8413), NIST IR 8413, July 2022. See also [Announcement: The End of the 3rd Round - the First PQC Algorithms to be Standardized](https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/G0DoD7lkGPk/m/f3Hl0sh3AgAJ) and [PQC Standardization Process: Announcing Four Candidates to be Standardized, plus Fourth Round Candidates](https://csrc.nist.gov/news/2022/pqc-candidates-to-be-standardized-and-round-4)
 
 <a name="NISTSTD">[NISTSTD]</a> D. Cooper, D. Apon, Q. Dang, M. Davidson, M. Dworkin, and C. Miller, [Recommendation for Stateful Hash-Based Signature Schemes](https://doi.org/10.6028/NIST.SP.800-208), NIST Special Publication 800-208, October 2020
 
@@ -187,3 +189,5 @@ We then will consider in the table only the SHA-256 and SHAKE256 variants, other
 <a name="21">[21]</a> See [[KF](#KF), Table 3], for `2^20` messages for LMS and XMSS and `2^60` for HSS and XMSS-MT
 
 <a name="22">[22]</a> See [[NIST2020](#NIST2020)]
+
+<a name="23">[23]</a> See [[NIST2022](#NIST2022)]

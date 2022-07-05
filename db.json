@@ -9,9 +9,9 @@
 			{"level": "5"}
 		],
 		"type": "code",
-		"NIST": "finalist (round 3)",
+		"NIST": "round 4",
 		"notesNIST": [
-			{"note": "22"}
+			{"note": "23"}
 		],
 		"variants": [
 			{
@@ -68,9 +68,9 @@
 			{"level": "5"}
 		],
 		"type": "lattice (structured)",
-		"NIST": "finalist (round 3)",
+		"NIST": "standard",
 		"notesNIST": [
-			{"note": "22"}
+			{"note": "23"}
 		],
 		"variants": [
 			{
@@ -274,9 +274,9 @@
 			{"level": "5"}
 		],
 		"type": "code",
-		"NIST": "alternate (round 3)",
+		"NIST": "round 4",
 		"notesNIST": [
-			{"note": "22"}
+			{"note": "23"}
 		],
 		"variants": [
 			{
@@ -334,9 +334,9 @@
 			{"level": "5"}
 		],
 		"type": "code",
-		"NIST": "alternate (round 3)",
+		"NIST": "round 4",
 		"notesNIST": [
-			{"note": "22"}
+			{"note": "23"}
 		],
 		"variants": [
 			{
@@ -457,9 +457,9 @@
 			{"level": "5"}
 		],
 		"type": "isogenies",
-		"NIST": "alternate (round 3)",
+		"NIST": "round 4",
 		"notesNIST": [
-			{"note": "22"}
+			{"note": "23"}
 		],
 		"variants": [
 			{
@@ -672,9 +672,9 @@
 			{"level": "5"}
 		],
 		"type": "lattice (structured)",
-		"NIST": "finalist (round 3)",
+		"NIST": "standard",
 		"notesNIST": [
-			{"note": "22"}
+			{"note": "23"}
 		],
 		"variants": [
 			{
@@ -703,10 +703,10 @@
 			{"level": "1"},
 			{"level": "5"}
 		],
-		"type": "lattice (structured)",
-		"NIST": "finalist (round 3)",
+		"type": "standard",
+		"NIST": "standard",
 		"notesNIST": [
-			{"note": "22"}
+			{"note": "23"}
 		],
 		"variants": [
 			{
@@ -956,9 +956,9 @@
 			{"level": "5"}
 		],
 		"type": "hash (stateless)",
-		"NIST": "alternate (round 3)",
+		"NIST": "standard",
 		"notesNIST": [
-			{"note": "22"}
+			{"note": "23"}
 		],
 		"variants": [
 			{
