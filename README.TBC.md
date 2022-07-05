@@ -50,7 +50,7 @@ Even if these tables are focused on the French context, they may be used in othe
 | Stateful hash-based                                                 | [LMS, HSS](https://datatracker.ietf.org/doc/html/rfc8554), [XMSS, XMSS-MT](https://datatracker.ietf.org/doc/html/rfc8391) | Standard            [[10](#10)] | Compliant       [[9](#9)] |
 | [CRYSTALS-DILITHIUM](https://pq-crystals.org/dilithium/index.shtml) | 5                                             | Finalist (round 3)  [[22](#22)] | Hybrid        [[13](#13)] |
 | [FALCON](https://falcon-sign.info/)                                 | 1024                                          | Finalist (round 3)  [[22](#22)] | Hybrid        [[13](#13)] |
-| [Rainbow](https://www.pqcrainbow.org/)                              | UOV parameters SL5                 [[6](#6)]  | Finalist (round 3)  [[22](#22)] | Compliant                 |
+| [Rainbow](https://www.pqcrainbow.org/)                              | UOV parameters SL5                 [[6](#6)]  | Finalist (round 3)  [[22](#22)] | Hybrid                    |
 | [GeMSS](https://www-polsys.lip6.fr/Links/NIST/GeMSS.html)           | 256, all variants                             | Alternate (round 3) [[22](#22)] | Not compliant [[15](#15)] |
 | [Picnic](https://microsoft.github.io/Picnic/)                       | L5-FS, L5-UR, L5-full, 3-L5                   | Alternate (round 3) [[22](#22)] | Hybrid                    |
 | [SPHINCS+](https://sphincs.org/)                                    | SHAKE-256s, SHA2-256s, SHAKE-256f, SHA2-256s  | Alternate (round 3) [[22](#22)] | Compliant       [[9](#9)] |
