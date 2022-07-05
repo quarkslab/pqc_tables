@@ -6,7 +6,7 @@ The goal of the following tables is to summarize the current [ANSSI](#ANSSI) vie
 
 ### On the ANSSI column
 
-According to [[ANSSI](#ANSSI)],
+According to [[ANSSI](#ANSSI)]
 
 > Moreover the conjectured post-quantum level should be as high as possible, preferably NIST level V (AES-256).
 
@@ -16,8 +16,8 @@ We then consider, in the ANSSI column, that if a cryptographic scheme does not p
 
 About the hybrid mechanism, it can be:
 
-* *concatenate KDF* for key exchange mechanisms, see Section 3.3 of [[SFG](#SFG)] or Section 8.2 of [[ETSI](#ETSI)];
-* *cascade KDF* for key exchange mechanisms, see Section 8.3 of [[ETSI](#ETSI)];
+* *concatenate KDF* for key exchange mechanisms [[SFG](#SFG), §3.3] and [[ETSI](#ETSI), §8.2];
+* *cascade KDF* for key exchange mechanisms [[ETSI](#ETSI), §8.3];
 * *concatenate* for signatures.
 
 ### Notes (simplified tables)
@@ -73,9 +73,9 @@ For performance benchmarks, an interested reader may refer to [eBACS](https://be
 
 In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the paramaters given:
 
-* for LMS, in Table 2 of [[RFC8554](#RFC8554)];
-* for XMSS, in Table 2 of [[RFC8391](#RFC8391)];
-* for XMSS-MT, in Table 4 of [[RFC8391](#RFC8391)].
+* for LMS [[RFC8554](#RFC8554), Table 2];
+* for XMSS [[RFC8391](#RFC8391), Table 2];
+* for XMSS-MT [[RFC8391](#RFC8391), Table 4].
 
 ### Post-quantum cryptography key exchange mechanisms and their usage for (French) certification
 
@@ -205,7 +205,7 @@ From [[NLNCSA](#NLNCSA)]
 
 <a name="10">[10]</a> See [[NISTSTD](#NISTSTD)], [[RFC8391](#RFC8391)] and [[RFC8554](#RFC8554)]
 
-<a name="11">[11]</a> See Table 2 in [[KF](#KF)]
+<a name="11">[11]</a> See [[KF](#KF), Table 2]
 
 <a name="12">[12]</a> Only from the documentation
 
@@ -234,12 +234,12 @@ and
 
 We then will consider in the table only the SHA-256 and SHAKE256 variants, other paramaters being not relevant in the context of [[ANSSI](#ANSSI)]
 
-<a name="18">[18]</a> See Table 1 in [[KPCSA](#KPCSA)]
+<a name="18">[18]</a> See [[KPCSA](#KPCSA), Table 1]
 
 <a name="19">[19]</a> By assuming that `o1 = 36`, `o2 = 64` and `v1 = 148` which is coherent with the parameters in [[6](#6)], the formula in page 17 of the documentation gives the equation  `o1 * o2 + v1 * (o1 + o2) + o1 * o2 + o1 * (v1 * (v1 + 1) / 2 + v1 * o1) + o2 * ((v1 + o1) * (v1 + o1 + 1) / 2 + (v1 + o1) * o2)`
 
 <a name="20">[20]</a> By modifying the code as proposed in [`script_test.sh`](script_test.sh), we obtain the following values
 
-<a name="21">[21]</a> See Table 3 in [[KF](#KF)], for `2^20` messages for LMS and XMSS and `2^60` for HSS and XMSS-MT
+<a name="21">[21]</a> See [[KF](#KF), Table 3], for `2^20` messages for LMS and XMSS and `2^60` for HSS and XMSS-MT
 
 <a name="22">[22]</a> See [[NIST2020](#NIST2020)]
