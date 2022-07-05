@@ -126,7 +126,7 @@ def sorted_NIST_status(scheme):
 def sorted_alphabetical(scheme):
     return scheme["name"].lower()
 
-def complete_tables(data):
+def complete_tables(data, filew):
     KEM = []
     signature = []
     for scheme in data:
@@ -144,14 +144,14 @@ def complete_tables(data):
     KEM = sorted(KEM, key=sorted_NIST_status)
     signature = sorted(signature, key=sorted_NIST_status)
 
-    print("")
-    print("### Post-quantum cryptography key exchange mechanisms and their usage for (French) certification")
-    print("")
-    print("| KEM | Security Levels | Variant (levels IV / V if available) | Type | NIST | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) | pk size (bytes) | ct size (bytes) | ss size (bytes) |")
-    print("| --- | --- | --- | --- | --- | --- | --- |  --- | --- | --- |")
+    filew.write("\n")
+    filew.write("### Post-quantum cryptography key exchange mechanisms and their usage for (French) certification\n")
+    filew.write("\n")
+    filew.write("| KEM | Security Levels | Variant (levels IV / V if available) | Type | NIST | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) | pk size (bytes) | ct size (bytes) | ss size (bytes) |\n")
+    filew.write("| --- | --- | --- | --- | --- | --- | --- |  --- | --- | --- |\n")
     for scheme in KEM:
         variant = scheme["variantdetails"]
-        s = "| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} | {9} |".format(
+        s = "| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} | {9} |\n".format(
                 format_name(scheme),
                 format_level(scheme),
                 variant["variant"] + format_variant_level(variant) + format_notes(variant, "variant"),
@@ -162,16 +162,16 @@ def complete_tables(data):
                 format_doc_code_data(variant, "pk"),
                 format_doc_code_data(variant, "ct"),
                 format_doc_code_data(variant, "ss"))
-        print(s)
+        filew.write(s)
 
-    print("")
-    print("### Post-quantum cryptography signatures and their usage for (French) certification")
-    print("")
-    print("| Signature | Security Levels | Variant (levels IV / V if available) | Type | NIST | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) |  pk size (bytes) | sig size (bytes) |")
-    print("| --- | --- | --- | --- | --- | --- | --- |  --- | --- |")
+    filew.write("\n")
+    filew.write("### Post-quantum cryptography signatures and their usage for (French) certification\n")
+    filew.write("\n")
+    filew.write("| Signature | Security Levels | Variant (levels IV / V if available) | Type | NIST | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) |  pk size (bytes) | sig size (bytes) |\n")
+    filew.write("| --- | --- | --- | --- | --- | --- | --- |  --- | --- |\n")
     for scheme in signature:
         variant = scheme["variantdetails"]
-        s = "| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |".format(
+        s = "| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} |\n".format(
                 format_name(scheme),
                 format_level(scheme) + format_notes(scheme, "levels"),
                 variant["variant"] + format_variant_level(variant),
@@ -181,24 +181,29 @@ def complete_tables(data):
                 format_doc_code_data(variant, "sk"),
                 format_doc_code_data(variant, "pk"),
                 format_doc_code_data(variant, "sig"))
-        print(s)
+        filew.write(s)
 
-filer = open("db.json")
+filer = open("db.json", "r")
+filew = open("tables.md", "w+")
 
 try:
     data = json.load(filer)
-    complete_tables(data)
+    complete_tables(data, filew)
 
 # Semantic error in db.json.
 except json.decoder.JSONDecodeError as e:
     print(str(e))
     filer.close()
+    filew.close()
     sys.exit(2)
    
 # Other error.
 except Exception:
     print(traceback.format_exc())
     filer.close()
+    filew.close()
     sys.exit(1)
 
+filer.close()
+filew.close()
 sys.exit(0)
