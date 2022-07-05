@@ -975,7 +975,7 @@
 				"sig": "29792"
 			},
 			{
-				"variant": "SHA2-256s",
+				"variant": "SHA2-512s",
 				"levels": [
 					{"level": "5"}
 				],
@@ -1001,7 +1001,7 @@
 				"sig": "49856"
 			},
 			{
-				"variant": "SHA2-256f",
+				"variant": "SHA2-512f",
 				"levels": [
 					{"level": "5"}
 				],

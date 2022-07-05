@@ -45,15 +45,15 @@ Even if these tables are focused on the French context, they may be used in othe
 
 ### Post-quantum cryptography signatures and their usage for (French) certifications (simplified tables)
 
-| Signature                                                           | Variants (best security level)                | NIST                            | ANSSI   [[ANSSI](#ANSSI)] |
-| ---                                                                 | ---                                           | ---                             | ---                       |
-| [CRYSTALS-DILITHIUM](https://pq-crystals.org/dilithium/index.shtml) | 5                                             | Standard            [[23](#23)] | Hybrid        [[13](#13)] |
-| [FALCON](https://falcon-sign.info/)                                 | 1024                                          | Standard            [[23](#23)] | Hybrid        [[13](#13)] |
+| Signature                                                           | Variants (best security level)               | NIST                            | ANSSI   [[ANSSI](#ANSSI)] |
+| ---                                                                 | ---                                          | ---                             | ---                       |
+| [CRYSTALS-DILITHIUM](https://pq-crystals.org/dilithium/index.shtml) | 5                                            | Standard            [[23](#23)] | Hybrid        [[13](#13)] |
+| [FALCON](https://falcon-sign.info/)                                 | 1024                                         | Standard            [[23](#23)] | Hybrid        [[13](#13)] |
 | Stateful hash-based                                                 | [LMS, HSS](https://datatracker.ietf.org/doc/html/rfc8554), [XMSS, XMSS-MT](https://datatracker.ietf.org/doc/html/rfc8391) | Standard            [[10](#10)] | Compliant       [[9](#9)] |
-| [SPHINCS+](https://sphincs.org/)                                    | SHAKE-256s, SHA2-256s, SHAKE-256f, SHA2-256s  | Standard            [[23](#23)] | Compliant       [[9](#9)] |
-| [Rainbow](https://www.pqcrainbow.org/)                              | UOV parameters SL5                 [[6](#6)]  | Finalist (round 3)  [[22](#22)] | Hybrid                    |
-| [GeMSS](https://www-polsys.lip6.fr/Links/NIST/GeMSS.html)           | 256, all variants                             | Alternate (round 3) [[22](#22)] | Not compliant [[15](#15)] |
-| [Picnic](https://microsoft.github.io/Picnic/)                       | L5-FS, L5-UR, L5-full, 3-L5                   | Alternate (round 3) [[22](#22)] | Hybrid                    |
+| [SPHINCS+](https://sphincs.org/)                                    | SHAKE-256s, SHAKE-256f, SHA2-512s, SHA2-512s | Standard            [[23](#23)] | Compliant       [[9](#9)] |
+| [Rainbow](https://www.pqcrainbow.org/)                              | UOV parameters SL5                 [[6](#6)] | Finalist (round 3)  [[22](#22)] | Hybrid                    |
+| [GeMSS](https://www-polsys.lip6.fr/Links/NIST/GeMSS.html)           | 256, all variants                            | Alternate (round 3) [[22](#22)] | Not compliant [[15](#15)] |
+| [Picnic](https://microsoft.github.io/Picnic/)                       | L5-FS, L5-UR, L5-full, 3-L5                  | Alternate (round 3) [[22](#22)] | Hybrid                    |
 
 ## Tables
 
@@ -113,9 +113,9 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 | [HSS](https://datatracker.ietf.org/doc/html/rfc8554) | V [[18](#18)] | with `LMS_SHA256_M32_H..` | Hash (stateful) | Standard [[10](#10)] | Compliant [[9](#9)] | Dependent | 60 | Dependent (ex: 15,533 [[21](#21)]) |
 | [LMS](https://datatracker.ietf.org/doc/html/rfc8554) | V [[18](#18)] | `LMS_SHA256_M32_H..` | Hash (stateful) | Standard [[10](#10)] | Compliant [[9](#9)] | Dependent | 56 | Dependent (ex: 2,828 [[21](#21)]) |
 | [SPHINCS+](https://sphincs.org/) | I, II, III, V | SHAKE-256s | Hash (stateless) | Standard [[23](#23)] | Compliant [[9](#9)] | 128 | 64 | 29,792 |
-| [SPHINCS+](https://sphincs.org/) | I, II, III, V | SHA2-256s | Hash (stateless) | Standard [[23](#23)] | Compliant [[9](#9)] | 128 | 64 | 29,792 |
+| [SPHINCS+](https://sphincs.org/) | I, II, III, V | SHA2-512s | Hash (stateless) | Standard [[23](#23)] | Compliant [[9](#9)] | 128 | 64 | 29,792 |
 | [SPHINCS+](https://sphincs.org/) | I, II, III, V | SHAKE-256f | Hash (stateless) | Standard [[23](#23)] | Compliant [[9](#9)] | 128 | 64 | 49,856 |
-| [SPHINCS+](https://sphincs.org/) | I, II, III, V | SHA2-256f | Hash (stateless) | Standard [[23](#23)] | Compliant [[9](#9)] | 128 | 64 | 49,856 |
+| [SPHINCS+](https://sphincs.org/) | I, II, III, V | SHA2-512f | Hash (stateless) | Standard [[23](#23)] | Compliant [[9](#9)] | 128 | 64 | 49,856 |
 | [XMSS](https://datatracker.ietf.org/doc/html/rfc8391) | II, V [[17](#17)] | `XMSS-SHA2_.._256` | Hash (stateful) | Standard [[10](#10)] | Compliant [[9](#9)] | Dependent | 68 | Dependent (ex: 5,716 [[21](#21)]) |
 | [XMSS](https://datatracker.ietf.org/doc/html/rfc8391) | II, V [[17](#17)] | `XMSS-SHAKE_.._512` | Hash (stateful) | Standard [[10](#10)] | Compliant [[9](#9)] | Dependent | 132 | Dependent (ex: 5,716 [[21](#21)]) |
 | [XMSS-MT](https://datatracker.ietf.org/doc/html/rfc8391) | II, V [[17](#17)] | `XMSSMT-SHA2_../.._256` | Hash (stateful) | Standard [[10](#10)] | Compliant [[9](#9)] | Dependent | 68 | Dependent (ex: 14,824 [[21](#21)]) |
@@ -155,7 +155,7 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 
 <a name="NIST2020">[NIST2020]</a> G. Alagic, J. Alperin-Sheriff, D. Apon, D. Cooper, Q. Dang, J. Kelsey, Y.-K. Liu, C. Miller, D. Moody, R. Peralta, R. Perlner, A. Robinson and D. Smith-Tone, [Status Report on the Second Round of the NIST Post-Quantum Cryptography Standardization Process](https://csrc.nist.gov/publications/detail/nistir/8309/final), NISTIR 8309, July 2020
 
-<a name*"NIST2022">[NIST2022]</a> G. Alagic, D. Apon, D. Cooper, Q. Dang, T. Dang, J. Kelsey, J. Lichtinger, C. Miller, D. Moody, R. Peralta, R. Perlner, A. Robinson, D. Smith-Tone, [Status Report on the Third Round of the NIST Post-Quantum Cryptography Standardization Process](https://doi.org/10.6028/NIST.IR.8413), NIST IR 8413, July 2022 and [Announcement: The End of the 3rd Round - the First PQC Algorithms to be Standardized](https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/G0DoD7lkGPk/m/f3Hl0sh3AgAJ)
+<a name*"NIST2022">[NIST2022]</a> G. Alagic, D. Apon, D. Cooper, Q. Dang, T. Dang, J. Kelsey, J. Lichtinger, C. Miller, D. Moody, R. Peralta, R. Perlner, A. Robinson, D. Smith-Tone, [Status Report on the Third Round of the NIST Post-Quantum Cryptography Standardization Process](https://doi.org/10.6028/NIST.IR.8413), NIST IR 8413, July 2022. See also [Announcement: The End of the 3rd Round - the First PQC Algorithms to be Standardized](https://groups.google.com/a/list.nist.gov/g/pqc-forum/c/G0DoD7lkGPk/m/f3Hl0sh3AgAJ) and [PQC Standardization Process: Announcing Four Candidates to be Standardized, plus Fourth Round Candidates](https://csrc.nist.gov/news/2022/pqc-candidates-to-be-standardized-and-round-4)
 
 <a name="NISTSTD">[NISTSTD]</a> D. Cooper, D. Apon, Q. Dang, M. Davidson, M. Dworkin, and C. Miller, [Recommendation for Stateful Hash-Based Signature Schemes](https://doi.org/10.6028/NIST.SP.800-208), NIST Special Publication 800-208, October 2020
 
