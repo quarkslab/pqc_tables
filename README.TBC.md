@@ -81,6 +81,8 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 
 <a name="ANSSI">[ANSSI]</a> [ANSSI views on the Post-Quantum Cryptography transition](https://www.ssi.gouv.fr/publication/anssi-views-on-the-post-quantum-cryptography-transition/), 4 January 2022
 
+<a name="ANSSIACT">[ANSSIACT]</a> [Sélection par le NIST de futurs standards en cryptographie post-quantique](https://www.ssi.gouv.fr/actualite/selection-par-le-nist-de-futurs-standards-en-cryptographie-post-quantique/), 18 July 2022
+
 <a name="BBCPSTV">[BBCPSTV]</a> J. Baena, P. Briaud, D. Cabarcas, R. Perlner, D. Smith-Tone and J. Verbel, [Improving Support-Minors rank attacks: applications to GeMSS and Rainbow](https://eprint.iacr.org/2021/1677.pdf) 
 
 <a name="Beu">[Beu]</a> W. Beullens, [Breaking Rainbow Takes a Weekend on a Laptop](https://eprint.iacr.org/2022/214.pdf)
@@ -137,6 +139,10 @@ From [[NLNCSA](#NLNCSA)]
 
 > For example, a developer should be able to obtain a security visa for a product implementing FrodoKEM whether NIST decides that FrodoKEM will be one of the first PQC standards or not.
 
+From [[ANSSIACT](#ANSSIACT)]
+
+> En effet, certains algorithmes qui n’ont pas été retenus mais qui semblent disposer d’une sécurité à long terme au moins équivalente à celle des algorithmes sélectionnés (comme par exemple le mécanisme d’établissement de clé FrodoKEM, fondé sur les réseaux euclidiens non structurés) peuvent demeurer des options dignes d’intérêt pour des applications de haute sécurité suffisamment peu contraintes en termes de bande passante.
+
 From [[BSI](#BSI)]
 
 > The mechanisms FrodoKEM-976, **FrodoKEM-1344** as well as Classic McEliece with the parameters in Categories 3 and 5 are assessed to be cryptographically suitable to protect confidential.
@@ -148,6 +154,10 @@ From [[NLNCSA](#NLNCSA)]
 <a name="9">[9]</a> From [[ANSSI](#ANSSI)]
 
 > Hash-based signatures are an exception for hybridation: due to their well-studied underlying mathematical problem, ANSSI estimates that these algorithms could be used today without hybridation. However, their potential application range is limited (low number of signatures queries or large signature sizes).
+
+From [[ANSSIACT](#ANSSIACT)]
+
+> à l’exception de mécanismes uniquement fondés sur la sécurité de fonctions de hachage comme SPHINCS+, pour lesquels l’hybridation est optionnelle
 
 <a name="10">[10]</a> See [[NISTSTD](#NISTSTD)], [[RFC8391](#RFC8391)] and [[RFC8554](#RFC8554)]
 
@@ -191,3 +201,7 @@ We then will consider in the table only the SHA-256 and SHAKE256 variants, other
 <a name="22">[22]</a> See [[NIST2020](#NIST2020)]
 
 <a name="23">[23]</a> See [[NIST2022](#NIST2022)]
+
+<a name="24">[24]</a> See [[ANSSIACT](#ANSSIACT)]
+
+> L’on peut donc désormais considérer les quatre algorithmes CRYSTALS-Kyber, CRYSTALS-Dilithium, FALCON et SPHINCS+ comme des choix à envisager dans la majorité des cas pour la sélection d’algorithmes post-quantiques pour la conception de produits de sécurité.

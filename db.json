@@ -80,7 +80,8 @@
 				],
 				"ANSSI": "hybrid",
 				"notesANSSI": [
-					{"note": "13"}
+					{"note": "13"},
+					{"note": "24"}
 				],
 				"sk": "3168",
 				"pk": "1568",
@@ -684,7 +685,8 @@
 				],
 				"ANSSI": "hybrid",
 				"notesANSSI": [
-					{"note": "13"}
+					{"note": "13"},
+					{"note": "24"}
 				],
 				"skcode": "4880",
 				"notesskcode": [
@@ -716,7 +718,8 @@
 				],
 				"ANSSI": "hybrid",
 				"notesANSSI": [
-					{"note": "13"}
+					{"note": "13"},
+					{"note": "24"}
 				],
 				"skcode": "2305",
 				"notesskcode": [
@@ -968,7 +971,8 @@
 				],
 				"ANSSI": "compliant",
 				"notesANSSI": [
-					{"note": "9"}
+					{"note": "9"},
+					{"note": "24"}
 				],
 				"sk": "128",
 				"pk": "64",
@@ -981,7 +985,8 @@
 				],
 				"ANSSI": "compliant",
 				"notesANSSI": [
-					{"note": "9"}
+					{"note": "9"},
+					{"note": "24"}
 				],
 				"sk": "128",
 				"pk": "64",
@@ -994,7 +999,8 @@
 				],
 				"ANSSI": "compliant",
 				"notesANSSI": [
-					{"note": "9"}
+					{"note": "9"},
+					{"note": "24"}
 				],
 				"sk": "128",
 				"pk": "64",
@@ -1007,7 +1013,8 @@
 				],
 				"ANSSI": "compliant",
 				"notesANSSI": [
-					{"note": "9"}
+					{"note": "9"},
+					{"note": "24"}
 				],
 				"sk": "128",
 				"pk": "64",

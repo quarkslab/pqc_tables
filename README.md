@@ -81,7 +81,7 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 
 | KEM | Security Levels | Variant (levels IV / V if available) | Type | NIST | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) | pk size (bytes) | ct size (bytes) | ss size (bytes) |
 | --- | --- | --- | --- | --- | --- | --- |  --- | --- | --- |
-| [CRYSTALS-KYBER](https://pq-crystals.org/kyber/index.shtml) | I, III, V | 1024 | Lattice (structured) | Standard [[23](#23)] | Hybrid [[13](#13)] | 3,168 | 1,568 | 1,568 | 32 |
+| [CRYSTALS-KYBER](https://pq-crystals.org/kyber/index.shtml) | I, III, V | 1024 | Lattice (structured) | Standard [[23](#23)] | Hybrid [[13](#13), [24](#24)] | 3,168 | 1,568 | 1,568 | 32 |
 | [BIKE](http://bikesuite.org/) | I, III, V | Level 5 | Code | Round 4 [[23](#23)] | Hybrid | 580 | 5,122 / 10,276 | 5,154 | 32 |
 | [Classic McEliece](https://classic.mceliece.org/) | I, III, V | 6688128(f) | Code | Round 4 [[23](#23)] | Hybrid [[7](#7)] | 13,932 | 1,044,992 | 240 | 32 |
 | [Classic McEliece](https://classic.mceliece.org/) | I, III, V | 6960119(f) | Code | Round 4 [[23](#23)] | Hybrid [[7](#7)] | 13,948 | 1,047,319 | 226 | 32 |
@@ -108,14 +108,14 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 
 | Signature | Security Levels | Variant (levels IV / V if available) | Type | NIST | ANSSI [[ANSSI](#ANSSI)] | sk size (bytes) |  pk size (bytes) | sig size (bytes) |
 | --- | --- | --- | --- | --- | --- | --- |  --- | --- |
-| [CRYSTALS-DILITHIUM](https://pq-crystals.org/dilithium/index.shtml) | II, III, V | 5 | Lattice (structured) | Standard [[23](#23)] | Hybrid [[13](#13)] | 4,880 [[5](#5)] | 2,592 | 4,595 |
-| [FALCON](https://falcon-sign.info/) | I, V | 1024 | Standard | Standard [[23](#23)] | Hybrid [[13](#13)] | 2,305 [[5](#5)] | 1,793 | 1,280 / 1,330 |
+| [CRYSTALS-DILITHIUM](https://pq-crystals.org/dilithium/index.shtml) | II, III, V | 5 | Lattice (structured) | Standard [[23](#23)] | Hybrid [[13](#13), [24](#24)] | 4,880 [[5](#5)] | 2,592 | 4,595 |
+| [FALCON](https://falcon-sign.info/) | I, V | 1024 | Standard | Standard [[23](#23)] | Hybrid [[13](#13), [24](#24)] | 2,305 [[5](#5)] | 1,793 | 1,280 / 1,330 |
 | [HSS](https://datatracker.ietf.org/doc/html/rfc8554) | V [[18](#18)] | with `LMS_SHA256_M32_H..` | Hash (stateful) | Standard [[10](#10)] | Compliant [[9](#9)] | Dependent | 60 | Dependent (ex: 15,533 [[21](#21)]) |
 | [LMS](https://datatracker.ietf.org/doc/html/rfc8554) | V [[18](#18)] | `LMS_SHA256_M32_H..` | Hash (stateful) | Standard [[10](#10)] | Compliant [[9](#9)] | Dependent | 56 | Dependent (ex: 2,828 [[21](#21)]) |
-| [SPHINCS+](https://sphincs.org/) | I, II, III, V | SHAKE-256s | Hash (stateless) | Standard [[23](#23)] | Compliant [[9](#9)] | 128 | 64 | 29,792 |
-| [SPHINCS+](https://sphincs.org/) | I, II, III, V | SHA2-512s | Hash (stateless) | Standard [[23](#23)] | Compliant [[9](#9)] | 128 | 64 | 29,792 |
-| [SPHINCS+](https://sphincs.org/) | I, II, III, V | SHAKE-256f | Hash (stateless) | Standard [[23](#23)] | Compliant [[9](#9)] | 128 | 64 | 49,856 |
-| [SPHINCS+](https://sphincs.org/) | I, II, III, V | SHA2-512f | Hash (stateless) | Standard [[23](#23)] | Compliant [[9](#9)] | 128 | 64 | 49,856 |
+| [SPHINCS+](https://sphincs.org/) | I, II, III, V | SHAKE-256s | Hash (stateless) | Standard [[23](#23)] | Compliant [[9](#9), [24](#24)] | 128 | 64 | 29,792 |
+| [SPHINCS+](https://sphincs.org/) | I, II, III, V | SHA2-512s | Hash (stateless) | Standard [[23](#23)] | Compliant [[9](#9), [24](#24)] | 128 | 64 | 29,792 |
+| [SPHINCS+](https://sphincs.org/) | I, II, III, V | SHAKE-256f | Hash (stateless) | Standard [[23](#23)] | Compliant [[9](#9), [24](#24)] | 128 | 64 | 49,856 |
+| [SPHINCS+](https://sphincs.org/) | I, II, III, V | SHA2-512f | Hash (stateless) | Standard [[23](#23)] | Compliant [[9](#9), [24](#24)] | 128 | 64 | 49,856 |
 | [XMSS](https://datatracker.ietf.org/doc/html/rfc8391) | II, V [[17](#17)] | `XMSS-SHA2_.._256` | Hash (stateful) | Standard [[10](#10)] | Compliant [[9](#9)] | Dependent | 68 | Dependent (ex: 5,716 [[21](#21)]) |
 | [XMSS](https://datatracker.ietf.org/doc/html/rfc8391) | II, V [[17](#17)] | `XMSS-SHAKE_.._512` | Hash (stateful) | Standard [[10](#10)] | Compliant [[9](#9)] | Dependent | 132 | Dependent (ex: 5,716 [[21](#21)]) |
 | [XMSS-MT](https://datatracker.ietf.org/doc/html/rfc8391) | II, V [[17](#17)] | `XMSSMT-SHA2_../.._256` | Hash (stateful) | Standard [[10](#10)] | Compliant [[9](#9)] | Dependent | 68 | Dependent (ex: 14,824 [[21](#21)]) |
@@ -136,6 +136,8 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 ## Explanations
 
 <a name="ANSSI">[ANSSI]</a> [ANSSI views on the Post-Quantum Cryptography transition](https://www.ssi.gouv.fr/publication/anssi-views-on-the-post-quantum-cryptography-transition/), 4 January 2022
+
+<a name="ANSSIACT">[ANSSIACT]</a> [Sélection par le NIST de futurs standards en cryptographie post-quantique](https://www.ssi.gouv.fr/actualite/selection-par-le-nist-de-futurs-standards-en-cryptographie-post-quantique/), 18 July 2022
 
 <a name="BBCPSTV">[BBCPSTV]</a> J. Baena, P. Briaud, D. Cabarcas, R. Perlner, D. Smith-Tone and J. Verbel, [Improving Support-Minors rank attacks: applications to GeMSS and Rainbow](https://eprint.iacr.org/2021/1677.pdf) 
 
@@ -193,6 +195,10 @@ From [[NLNCSA](#NLNCSA)]
 
 > For example, a developer should be able to obtain a security visa for a product implementing FrodoKEM whether NIST decides that FrodoKEM will be one of the first PQC standards or not.
 
+From [[ANSSIACT](#ANSSIACT)]
+
+> En effet, certains algorithmes qui n’ont pas été retenus mais qui semblent disposer d’une sécurité à long terme au moins équivalente à celle des algorithmes sélectionnés (comme par exemple le mécanisme d’établissement de clé FrodoKEM, fondé sur les réseaux euclidiens non structurés) peuvent demeurer des options dignes d’intérêt pour des applications de haute sécurité suffisamment peu contraintes en termes de bande passante.
+
 From [[BSI](#BSI)]
 
 > The mechanisms FrodoKEM-976, **FrodoKEM-1344** as well as Classic McEliece with the parameters in Categories 3 and 5 are assessed to be cryptographically suitable to protect confidential.
@@ -204,6 +210,10 @@ From [[NLNCSA](#NLNCSA)]
 <a name="9">[9]</a> From [[ANSSI](#ANSSI)]
 
 > Hash-based signatures are an exception for hybridation: due to their well-studied underlying mathematical problem, ANSSI estimates that these algorithms could be used today without hybridation. However, their potential application range is limited (low number of signatures queries or large signature sizes).
+
+From [[ANSSIACT](#ANSSIACT)]
+
+> à l’exception de mécanismes uniquement fondés sur la sécurité de fonctions de hachage comme SPHINCS+, pour lesquels l’hybridation est optionnelle
 
 <a name="10">[10]</a> See [[NISTSTD](#NISTSTD)], [[RFC8391](#RFC8391)] and [[RFC8554](#RFC8554)]
 
@@ -247,3 +257,7 @@ We then will consider in the table only the SHA-256 and SHAKE256 variants, other
 <a name="22">[22]</a> See [[NIST2020](#NIST2020)]
 
 <a name="23">[23]</a> See [[NIST2022](#NIST2022)]
+
+<a name="24">[24]</a> See [[ANSSIACT](#ANSSIACT)]
+
+> L’on peut donc désormais considérer les quatre algorithmes CRYSTALS-Kyber, CRYSTALS-Dilithium, FALCON et SPHINCS+ comme des choix à envisager dans la majorité des cas pour la sélection d’algorithmes post-quantiques pour la conception de produits de sécurité.
