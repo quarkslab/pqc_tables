@@ -88,7 +88,7 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 | [Classic McEliece](https://classic.mceliece.org/) | I, III, V | 8192128(f) | Code | Round 4 [[23](#23)] | Hybrid [[7](#7)] | 14,120 | 1,357,824 | 240 | 32 |
 | [HQC](http://pqc-hqc.org/) | I, III, V | 256 | Code | Round 4 [[23](#23)] | Hybrid | 7,285 | 7,245 | 14,469 | 64 |
 | [SIKE](http://sike.org/) | < I [[25](#25)] | p751 | Isogenies | Round 4 [[23](#23)] | Not compliant | 644 | 564 | 596 | 32 |
-| [SIKE](http://sike.org/) | < I [[25](#25)] | p751, compressed | Isogenies | Round 4 [[23](#23)] | Hybrid | 602 | 335 | 410 | 32 |
+| [SIKE](http://sike.org/) | < I [[25](#25)] | p751, compressed | Isogenies | Round 4 [[23](#23)] | Not compliant | 602 | 335 | 410 | 32 |
 | [NTRU](https://ntru.org/) | I, III, V | HPS-4096-821 (level III / V) [[3](#3)] | Lattice (structured) | Finalist (round 3) [[22](#22)] | Maybe hybrid [[1](#1)] | 1,590 | 1,230 | 1,230 | 32 |
 | [NTRU](https://ntru.org/) | I, III, V | HPS-4096-1229 [[2](#2), [3](#3)] | Lattice (structured) | Finalist (round 3) [[22](#22)] | Hybrid | 2,366 [[5](#5)] | 1,842 [[5](#5)] | 1,842 [[5](#5)] | 32 [[5](#5)] |
 | [NTRU](https://ntru.org/) | I, III, V | HRSS-1373 [[2](#2), [4](#4)] | Lattice (structured) | Finalist (round 3) [[22](#22)] | Hybrid | 2,938 [[5](#5)] | 2,401 [[5](#5)] | 2,401 [[5](#5)] | 32 [[5](#5)] |
