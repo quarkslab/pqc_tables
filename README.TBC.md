@@ -36,7 +36,7 @@ Even if these tables are focused on the French context, they may be used in othe
 | [BIKE](https://bikesuite.org/)                              | Level 5                                      | Round 4             [[23](#23)] | Hybrid                               |
 | [Classic McEliece](https://classic.mceliece.org/)           | 6688128(f), 6960119(f), 8192128(f)           | Round 4             [[23](#23)] | Hybrid                     [[7](#7)] |
 | [HQC](http://pqc-hqc.org/)                                  | 256                                          | Round 4             [[23](#23)] | Hybrid                               |
-| [SIKE](http://sike.org/)                                    | p751                                         | Round 4             [[23](#23)] | Hybrid                               |
+| [SIKE](http://sike.org/)                                    | p751                                         | Round 4             [[23](#23)] | Not compliant            [[25](#25)] |
 | [NTRU](https://ntru.org/)                                   | HPS-4096-821                                 | Finalist (round 3)  [[22](#22)] | Maybe hybrid               [[1](#1)] |
 | [NTRU](https://ntru.org/)                                   | HPS-4096-1229, HRSS-1373           [[2](#2)] | Finalist (round 3)  [[22](#22)] | Hybrid                               |
 | [SABER](https://www.esat.kuleuven.be/cosic/pqcrypto/saber/) | (u)FireSaber                                 | Finalist (round 3)  [[22](#22)] | Hybrid                               |
@@ -85,9 +85,11 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 
 <a name="BBCPSTV">[BBCPSTV]</a> J. Baena, P. Briaud, D. Cabarcas, R. Perlner, D. Smith-Tone and J. Verbel, [Improving Support-Minors rank attacks: applications to GeMSS and Rainbow](https://eprint.iacr.org/2021/1677.pdf) 
 
-<a name="Beu">[Beu]</a> W. Beullens, [Breaking Rainbow Takes a Weekend on a Laptop](https://eprint.iacr.org/2022/214.pdf)
+<a name="Beu">[Beu]</a> W. Beullens, [Breaking Rainbow Takes a Weekend on a Laptop](https://eprint.iacr.org/2022/214)
 
 <a name="BSI">[BSI]</a> [Migration zu Post-Quanten-Kryptografie](https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Krypto/Post-Quanten-Kryptografie.html), 24 August 2020; [Cryptographic Mechanisms: Recommendations and Key Lengths](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.html), BSI TR-02102-1, Version: 2022-1, 11 February 2022
+
+<a name="CD">[CD]</a> W. Castryck and T. Decru, [An efficient key recovery attack on SIDH (preliminary version)](https://eprint.iacr.org/2022/975)
 
 <a name="ETSI">[ETSI]</a> [Quantum-safe hybrid key exchanges](https://www.etsi.org/deliver/etsi_ts/103700_103799/103744/01.01.01_60/ts_103744v010101p.pdf). ETSI TS 103 744 V1.1.1, December 2020
 
@@ -97,7 +99,7 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 
 <a name="KF">[KF]</a> P. Kampanakis and S. Fluhrer, [LMS vs XMSS: Comparion of two Hash-Based Signature Standards](https://eprint.iacr.org/2017/349)
 
-<a name="KPCSA">[KPCSA]</a> P. Kampanakis, P. Panburana, M. Curcio, C. Shroff and M. M. Alam, [Post-Quantum LMS and SPHINCS+ Hash-Based Signatures for UEFI Secure Boot](https://eprint.iacr.org/2021/041.pdf)
+<a name="KPCSA">[KPCSA]</a> P. Kampanakis, P. Panburana, M. Curcio, C. Shroff and M. M. Alam, [Post-Quantum LMS and SPHINCS+ Hash-Based Signatures for UEFI Secure Boot](https://eprint.iacr.org/2021/041)
 
 <a name="NIST2020">[NIST2020]</a> G. Alagic, J. Alperin-Sheriff, D. Apon, D. Cooper, Q. Dang, J. Kelsey, Y.-K. Liu, C. Miller, D. Moody, R. Peralta, R. Perlner, A. Robinson and D. Smith-Tone, [Status Report on the Second Round of the NIST Post-Quantum Cryptography Standardization Process](https://doi.org/10.6028/NIST.IR.8309), NISTIR 8309, July 2020
 
@@ -205,3 +207,5 @@ We then will consider in the table only the SHA-256 and SHAKE256 variants, other
 <a name="24">[24]</a> See [[ANSSIACT](#ANSSIACT)]
 
 > L’on peut donc désormais considérer les quatre algorithmes CRYSTALS-Kyber, CRYSTALS-Dilithium, FALCON et SPHINCS+ comme des choix à envisager dans la majorité des cas pour la sélection d’algorithmes post-quantiques pour la conception de produits de sécurité.
+
+<a name="25">[25]</a> The attack in [[CD](#CD)] shows that the security of SIKEp751 is less than level I

@@ -155,7 +155,7 @@ def complete_tables(data, filew):
         variant = scheme["variantdetails"]
         s = "| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {7} | {8} | {9} |\n".format(
                 format_name(scheme),
-                format_level(scheme),
+                format_level(scheme) + format_notes(scheme, "levels"),
                 variant["variant"] + format_variant_level(variant) + format_notes(variant, "variant"),
                 scheme["type"].capitalize(),
                 scheme["NIST"].capitalize() + format_notes(scheme, "NIST"),

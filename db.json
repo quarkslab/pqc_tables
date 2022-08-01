@@ -452,10 +452,10 @@
 		"name": "SIKE",
 		"website": "http://sike.org/",
 		"levels": [
-			{"level": "1"},
-			{"level": "2"},
-			{"level": "3"},
-			{"level": "5"}
+			{"level": "< 1"}
+		],
+		"noteslevels": [
+			{"note": "25"}
 		],
 		"type": "isogenies",
 		"NIST": "round 4",
@@ -466,9 +466,9 @@
 			{
 				"variant": "p751",
 				"levels": [
-					{"level": "5"}
+					{"level": "< 1"}
 				],
-				"ANSSI": "hybrid",
+				"ANSSI": "not compliant",
 				"sk": "644",
 				"pk": "564",
 				"ct": "596",
@@ -477,7 +477,7 @@
 			{
 				"variant": "p751, compressed",
 				"levels": [
-					{"level": "5"}
+					{"level": "< 1"}
 				],
 				"ANSSI": "hybrid",
 				"sk": "602",
