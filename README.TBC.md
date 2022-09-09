@@ -32,7 +32,7 @@ Even if these tables are focused on the French context, they may be used in othe
 
 | KEM                                                         | Variants (best security level)               | NIST                            | ANSSI              [[ANSSI](#ANSSI)] |
 | ---                                                         | ---                                          | ---                             | ---                                  |
-| [CRYSTALS-KYBER](https://pq-crystals.org/kyber/index.shtml) | 1024                                         | Standard            [[23](#23)] | Hybrid        [[13](#13), [24](#24)] |
+| [CRYSTALS-KYBER](https://pq-crystals.org/kyber/index.shtml) | 1024                                         | Standard            [[23](#23)] | Hybrid        [[13](#13), [24](#24), [26](#26)] |
 | [BIKE](https://bikesuite.org/)                              | Level 5                                      | Round 4             [[23](#23)] | Hybrid                               |
 | [Classic McEliece](https://classic.mceliece.org/)           | 6688128(f), 6960119(f), 8192128(f)           | Round 4             [[23](#23)] | Hybrid                     [[7](#7)] |
 | [HQC](http://pqc-hqc.org/)                                  | 256                                          | Round 4             [[23](#23)] | Hybrid                               |
@@ -47,10 +47,10 @@ Even if these tables are focused on the French context, they may be used in othe
 
 | Signature                                                           | Variants (best security level)               | NIST                            | ANSSI              [[ANSSI](#ANSSI)] |
 | ---                                                                 | ---                                          | ---                             | ---                                  |
-| [CRYSTALS-DILITHIUM](https://pq-crystals.org/dilithium/index.shtml) | 5                                            | Standard            [[23](#23)] | Hybrid        [[13](#13), [24](#24)] |
+| [CRYSTALS-DILITHIUM](https://pq-crystals.org/dilithium/index.shtml) | 5                                            | Standard            [[23](#23)] | Hybrid        [[13](#13), [24](#24), [26](#26)] |
 | [FALCON](https://falcon-sign.info/)                                 | 1024                                         | Standard            [[23](#23)] | Hybrid        [[13](#13), [24](#24)] |
 | Stateful hash-based                                                 | [LMS, HSS](https://datatracker.ietf.org/doc/html/rfc8554), [XMSS, XMSS-MT](https://datatracker.ietf.org/doc/html/rfc8391) | Standard            [[10](#10)] | Compliant       [[9](#9)] |
-| [SPHINCS+](https://sphincs.org/)                                    | SHAKE-256s, SHAKE-256f, SHA2-512s, SHA2-512s | Standard            [[23](#23)] | Compliant       [[9](#9), [24](#24)] |
+| [SPHINCS+](https://sphincs.org/)                                    | SHAKE-256s, SHAKE-256f, SHA2-512s, SHA2-512f | Standard            [[23](#23)] | Compliant       [[9](#9), [24](#24)] |
 | [Rainbow](https://www.pqcrainbow.org/)                              | UOV parameters SL5                 [[6](#6)] | Finalist (round 3)  [[22](#22)] | Hybrid                               |
 | [GeMSS](https://www-polsys.lip6.fr/Links/NIST/GeMSS.html)           | 256, all variants                            | Alternate (round 3) [[22](#22)] | Not compliant            [[15](#15)] |
 | [Picnic](https://microsoft.github.io/Picnic/)                       | L5-FS, L5-UR, L5-full, 3-L5                  | Alternate (round 3) [[22](#22)] | Hybrid                               |
@@ -90,6 +90,8 @@ In the variants of LMS, HSS, XMSS and XMSS-MT, the `..` or `../..` refers to the
 <a name="BSI">[BSI]</a> [Migration zu Post-Quanten-Kryptografie](https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Krypto/Post-Quanten-Kryptografie.html), 24 August 2020; [Cryptographic Mechanisms: Recommendations and Key Lengths](https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.html), BSI TR-02102-1, Version: 2022-1, 11 February 2022
 
 <a name="CD">[CD]</a> W. Castryck and T. Decru, [An efficient key recovery attack on SIDH (preliminary version)](https://eprint.iacr.org/2022/975)
+
+<a name="CNSA">[CNSA]</a> [Announcing the Commercial National Security Algorithm Suite 2.0](https://media.defense.gov/2022/Sep/07/2003071834/-1/-1/0/CSA_CNSA_2.0_ALGORITHMS_.PDF) and [NSA Releases Future Quantum-Resistant (QR) Algorithm Requirements for National Security Systems](https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/3148990/nsa-releases-future-quantum-resistant-qr-algorithm-requirements-for-national-se/) 
 
 <a name="ETSI">[ETSI]</a> [Quantum-safe hybrid key exchanges](https://www.etsi.org/deliver/etsi_ts/103700_103799/103744/01.01.01_60/ts_103744v010101p.pdf). ETSI TS 103 744 V1.1.1, December 2020
 
@@ -209,3 +211,5 @@ We then will consider in the table only the SHA-256 and SHAKE256 variants, other
 > L’on peut donc désormais considérer les quatre algorithmes CRYSTALS-Kyber, CRYSTALS-Dilithium, FALCON et SPHINCS+ comme des choix à envisager dans la majorité des cas pour la sélection d’algorithmes post-quantiques pour la conception de produits de sécurité.
 
 <a name="25">[25]</a> The attack in [[CD](#CD)] shows that the security of SIKEp751 is less than level I
+
+<a name="26">[26]</a> See Table III of [[CNSA](#CNSA)]
